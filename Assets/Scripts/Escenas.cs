@@ -7,7 +7,7 @@ public class Escenas : MonoBehaviour
 {
     public void Jugar()
     {
-        SceneManager.LoadScene("Juego");
+        SceneManager.LoadScene("Juego   ");
     }
 
     public void Salir()
