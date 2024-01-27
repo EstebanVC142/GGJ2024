@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Vida : MonoBehaviour
+public class Vida : MonoBehaviour, ITakeDamage
 {
     public float vidaInicial;
     public float vidaActual;
@@ -20,7 +20,7 @@ public class Vida : MonoBehaviour
         vidaActual -= cuanto;
         if (vidaActual <= 0)
         {
-            print("Muerto" + gameObject.name);
+            print("Muerto " + gameObject.name);
             eventoMorir.Invoke();
         }
     }
