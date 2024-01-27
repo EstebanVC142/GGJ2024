@@ -30,8 +30,7 @@ public class EstadosAnimal : MonoBehaviour
     private void Start()
     {
         if (autoseleccionarTarget)
-            target = Perro.singleton.transform;
-        
+            target = Perro.singleton.transform;        
     }
 
     private void LateUpdate()
