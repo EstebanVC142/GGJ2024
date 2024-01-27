@@ -10,13 +10,7 @@ public class AttackBehaviour : MonoBehaviour
     [SerializeField]
     private GameObject attacker;
     [SerializeField]
-    private GameObject lookReference;
-    [SerializeField]
-    private float attackVelocity = 5;
-    [SerializeField]
     private float waitTime = 1;
-    [SerializeField]
-    private float rotationVelocity = 10;
     [SerializeField]
     private float maxDetectionDistance = 8;
     [SerializeField]
@@ -32,6 +26,7 @@ public class AttackBehaviour : MonoBehaviour
     private Vector3 initialPosition;
     private Vector3 attackHitBoxPos;
     private bool isStarted;
+    bool damageDealed = false;
 
     private void Awake()
     {
@@ -48,17 +43,20 @@ public class AttackBehaviour : MonoBehaviour
         float t = 0;
         isAttacking = true;
         Transform closestEnemy = null;
-        foreach (var enemy in FindObjectsOfType<DamageReceiver>())
+        foreach (var enemy in FindObjectsOfType<Vida>())
         {
-            Vector3 enemyDistance = enemy.transform.position - transform.position;
-            Vector3 forward = transform.TransformDirection(Vector3.forward);
-            float distance = enemyDistance.magnitude;
-            Vector3 enemyDistanceNormalized = enemyDistance.normalized;
-            float dot = Vector3.Dot(forward, enemyDistanceNormalized);
-
-            if (distance < maxDetectionDistance && dot > 0.96f)
+            if (enemy != gameObject.GetComponent<Vida>())
             {
-                closestEnemy = enemy.transform;
+                Vector3 enemyDistance = enemy.transform.position - transform.position;
+                Vector3 forward = transform.TransformDirection(Vector3.forward);
+                float distance = enemyDistance.magnitude;
+                Vector3 enemyDistanceNormalized = enemyDistance.normalized;
+                float dot = Vector3.Dot(forward, enemyDistanceNormalized);
+
+                if (distance < maxDetectionDistance && dot > 0.96f)
+                {
+                    closestEnemy = enemy.transform;
+                }
             }
         }
 
@@ -69,7 +67,6 @@ public class AttackBehaviour : MonoBehaviour
         }
 
         Vector3 ffg = attacker.transform.forward;
-        bool damageDealed = false;
 
         while (t < waitTime)
         {
@@ -87,12 +84,12 @@ public class AttackBehaviour : MonoBehaviour
             yield return new WaitForSeconds(Time.deltaTime);
         }
         isAttacking = false;
+        damageDealed = false;
         attacker.transform.localPosition = initialPosition;
     }
 
     private void DealDamage()
     {
-        Debug.Log("se llama");
         attackHitBoxPos = (attacker.transform.forward * 1f) + new Vector3(attacker.transform.position.x, attacker.transform.position.y, attacker.transform.position.z);
         Collider[] colliders = Physics.OverlapBox(attackHitBoxPos, attacker.transform.localScale / 4, Quaternion.identity, layer);
 
@@ -102,7 +99,7 @@ public class AttackBehaviour : MonoBehaviour
             {
                 if (colliders[i].gameObject.GetComponent<ITakeDamage>() != null)
                 {
-                    colliders[i].gameObject.GetComponent<ITakeDamage>().TakeDamage(damage);
+                    colliders[i].gameObject.GetComponent<ITakeDamage>().CausarDaño(damage);
                 }
             }
         }
@@ -121,7 +118,7 @@ public class AttackBehaviour : MonoBehaviour
     {
         Gizmos.color = Color.red;
         //Check that it is being run in Play Mode, so it doesn't try to draw this in Editor mode
-        if (isAttacking)
+        if (damageDealed)
             //Draw a cube where the OverlapBox is (positioned where your GameObject is as well as a size)
             Gizmos.DrawCube(attackHitBoxPos, transform.localScale / 2);
     }
