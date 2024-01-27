@@ -24,15 +24,6 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "LookMouse",
-                    "type": "Button",
-                    "id": "86a3200d-f02c-41a7-b708-d6989edbab1d",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Smell",
                     "type": "Button",
                     "id": "4c9f7620-1978-414b-9eeb-96a9349d610c",
@@ -188,10 +179,10 @@
                 },
                 {
                     "name": "",
-                    "id": "8773bbfa-79ab-4b36-bab6-7e0356497648",
-                    "path": "<Gamepad>/rightStick",
+                    "id": "b1ae5c93-4876-495f-8fc5-d8e7440f43d5",
+                    "path": "<Mouse>/delta",
                     "interactions": "",
-                    "processors": "",
+                    "processors": "Normalize(min=-1,max=1)",
                     "groups": "",
                     "action": "Look",
                     "isComposite": false,
@@ -199,12 +190,12 @@
                 },
                 {
                     "name": "",
-                    "id": "b1ae5c93-4876-495f-8fc5-d8e7440f43d5",
-                    "path": "<Mouse>/delta",
+                    "id": "8773bbfa-79ab-4b36-bab6-7e0356497648",
+                    "path": "<Gamepad>/rightStick",
                     "interactions": "",
-                    "processors": "",
+                    "processors": "ScaleVector2(x=30,y=30)",
                     "groups": "",
-                    "action": "LookMouse",
+                    "action": "Look",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
