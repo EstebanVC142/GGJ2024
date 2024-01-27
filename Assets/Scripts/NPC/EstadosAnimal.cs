@@ -20,9 +20,9 @@ public class EstadosAnimal : MonoBehaviour
     public bool autoseleccionarTarget = true;
     public Transform target;
     public float distancia;
+    public bool vivo = true;
 
-
-    private void Awake()
+    public void Awake()
     {
         if(autoseleccionarTarget)
             target = GameObject.FindGameObjectWithTag("Player").transform;
@@ -66,6 +66,7 @@ public class EstadosAnimal : MonoBehaviour
             case Estados.atacar:
                 break;
             case Estados.muerto:
+                vivo = false;
                 break;
             default:
                 break;
@@ -83,14 +84,18 @@ public class EstadosAnimal : MonoBehaviour
     }
     public virtual void EstadoSeguir()
     {
-        if (distancia < distaciaSeguir)
+        if (distancia < distaciaAtacar)
         {
-            CambiarEstado(Estados.seguir);
+            CambiarEstado(Estados.atacar);
+        }
+        else if (distancia > distaciaEscapar)
+        {
+            CambiarEstado(Estados.idle);
         }
     }
     public virtual void EstadoAtacar()
     {
-        if (distancia < distaciaSeguir)
+        if (distancia > distaciaAtacar + 0.4f)
         {
             CambiarEstado(Estados.seguir);
         }
@@ -105,7 +110,7 @@ public class EstadosAnimal : MonoBehaviour
 
     IEnumerator CalcularDistancia()
     {
-        while (true)
+        while (vivo )
         {
             if (target != null)
             {
