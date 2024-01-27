@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -18,78 +19,29 @@ public class AttackBehaviour : MonoBehaviour
     private float rotationVelocity = 10;
     [SerializeField]
     private float maxDetectionDistance = 8;
+    [SerializeField]
+    private int damage = 1;
     public AnimationCurve curve;
     public float avanzar;
     [SerializeField]
     private PlayerInput input;
+    [SerializeField]
+    private LayerMask layer;
 
     public bool isAttacking = false;
     private Vector3 initialPosition;
-    private quaternion initialRotation;
+    private Vector3 attackHitBoxPos;
+    private bool isStarted;
 
     private void Awake()
     {
         initialPosition = attacker.transform.localPosition;
-        initialRotation = attacker.transform.rotation;
     }
 
-    /*public void Attack(int damage)
+    private void Start()
     {
-        if (isAttacking) return;
-
-        Transform closestEnemy = null;
-        foreach (var enemy in FindObjectsOfType<DamageReceiver>())
-        {
-            Vector3 enemyDistance = enemy.transform.position - transform.position;
-            Vector3 forward = transform.TransformDirection(Vector3.forward);
-            float distance = enemyDistance.magnitude;
-            Vector3 enemyDistanceNormalized = enemyDistance.normalized;
-            float dot = Vector3.Dot(forward, enemyDistanceNormalized);
-
-            if (distance < maxDetectionDistance && dot > 0.96f)
-            {
-                closestEnemy = enemy.transform;
-            }
-        }
-
-        if (closestEnemy != null)
-        {
-            attacker.transform.LookAt(closestEnemy);
-        }
-        StartCoroutine(AttackAnimation());
+        isStarted = true;
     }
-
-    private IEnumerator AttackAnimation()
-    {
-        isAttacking = true;
-        Coroutine forward = StartCoroutine(MeshMovement(true));
-        Coroutine rotation;
-        yield return new WaitForSeconds(waitTime);
-        if (forward != null)
-        {
-            StopCoroutine(forward);
-            forward = StartCoroutine(MeshMovement(false));
-        }
-        yield return new WaitForSeconds(waitTime);
-        if (forward != null)
-        {
-            StopCoroutine(forward);
-        }
-        isAttacking = false;
-        attacker.transform.localPosition = initialPosition;
-    }
-
-    private IEnumerator MeshMovement(bool forward)
-    {
-        while (true)
-        {
-            if (forward)
-                attacker.transform.position += attacker.transform.forward * attackVelocity * Time.fixedDeltaTime;
-            else
-                attacker.transform.position -= attacker.transform.forward * attackVelocity * Time.fixedDeltaTime;
-            yield return new WaitForFixedUpdate();
-        }
-    }*/
 
     private IEnumerator Atacando()
     {
@@ -114,41 +66,63 @@ public class AttackBehaviour : MonoBehaviour
         if (closestEnemy != null)
         {
             lookDirection = (closestEnemy.position - transform.position).normalized;
-            //attacker.transform.LookAt(closestEnemy);
-            //Debug.Log(attacker.transform.rotation.eulerAngles);// = quaternion.Euler(attacker.transform.rotation.eulerAngles.x, 0, attacker.transform.rotation.eulerAngles.z);
         }
 
         Vector3 ffg = attacker.transform.forward;
+        bool damageDealed = false;
 
         while (t < waitTime)
         {
             attacker.transform.localPosition = Vector3.forward * curve.Evaluate(t / waitTime);
             if (closestEnemy != null)
             attacker.transform.forward = Vector3.Lerp(ffg, lookDirection, curve.Evaluate(t / waitTime));
+
+            
+            if (t >= waitTime / 2 && !damageDealed)
+            {
+                damageDealed = true;
+                DealDamage();
+            }
             t += Time.deltaTime;
             yield return new WaitForSeconds(Time.deltaTime);
         }
         isAttacking = false;
         attacker.transform.localPosition = initialPosition;
-        attacker.transform.localRotation = initialRotation;
-        //attacker.transform.localRotation = initialRotation;
     }
 
-    private IEnumerator BackToNormalRotation()
+    private void DealDamage()
     {
-        while (true)
+        Debug.Log("se llama");
+        attackHitBoxPos = (attacker.transform.forward * 1f) + new Vector3(attacker.transform.position.x, attacker.transform.position.y, attacker.transform.position.z);
+        Collider[] colliders = Physics.OverlapBox(attackHitBoxPos, attacker.transform.localScale / 4, Quaternion.identity, layer);
+
+        if (colliders.Length > 0)
         {
-            attacker.transform.rotation = Quaternion.Lerp(attacker.transform.rotation, initialRotation, rotationVelocity * Time.fixedDeltaTime);
-            yield return new WaitForFixedUpdate();
+            for (int i = 0; i < colliders.Length; i++)
+            {
+                if (colliders[i].gameObject.GetComponent<ITakeDamage>() != null)
+                {
+                    colliders[i].gameObject.GetComponent<ITakeDamage>().TakeDamage(damage);
+                }
+            }
         }
+
     }
 
     private void Update()
     {
         if (input.actions["Attack"].WasPressedThisFrame() && !isAttacking)
         {
-            //Attack(0);
             StartCoroutine(Atacando());
         }
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        //Check that it is being run in Play Mode, so it doesn't try to draw this in Editor mode
+        if (isAttacking)
+            //Draw a cube where the OverlapBox is (positioned where your GameObject is as well as a size)
+            Gizmos.DrawCube(attackHitBoxPos, transform.localScale / 2);
     }
 }
