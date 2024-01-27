@@ -20,14 +20,12 @@ public class Movement : MonoBehaviour
     private LayerMask layer;
     [SerializeField]
     private Rigidbody rb;
-
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private AttackBehaviour attackBehaviour;
 
     private void FixedUpdate()
     {
+        if (!attackBehaviour.isAttacking)
         Move();
     }
 
