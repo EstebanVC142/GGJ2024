@@ -24,9 +24,14 @@ public class EstadosAnimal : MonoBehaviour
 
     public void Awake()
     {
-        if(autoseleccionarTarget)
-            target = GameObject.FindGameObjectWithTag("Player").transform;
         StartCoroutine(CalcularDistancia());
+    }
+
+    private void Start()
+    {
+        if (autoseleccionarTarget)
+            target = Perro.singleton.transform;
+        
     }
 
     private void LateUpdate()
@@ -42,6 +47,7 @@ public class EstadosAnimal : MonoBehaviour
                 EstadoIdle();
                 break;
             case Estados.seguir:
+                transform.LookAt(target, Vector3.up);
                 EstadoSeguir();
                 break;
             case Estados.atacar:
@@ -112,10 +118,10 @@ public class EstadosAnimal : MonoBehaviour
     {
         while (vivo )
         {
+            yield return new WaitForSeconds(0.2f);
             if (target != null)
             {
                 distancia = Vector3.Distance(transform.position, target.position);
-                yield return new WaitForSeconds(0.3f);
             }
         }
     }
@@ -137,7 +143,7 @@ public class EstadosAnimal : MonoBehaviour
         int icono = (int)estado;
         icono++;
 
-        Gizmos.DrawIcon(transform.position + Vector3.up * 1.2f, "0" + icono + ".png", false);
+        Gizmos.DrawIcon(transform.position + Vector3.up * 2f, "0" + icono + ".png", false);
     }
 }
 public enum Estados
