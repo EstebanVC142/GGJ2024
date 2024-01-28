@@ -24,7 +24,6 @@ public class EnemigoPatrulla : EstadosAnimal
 
     public override void EstadoIdle()
     {
-        base.EstadoIdle();
         if (animaciones != null) animaciones.SetFloat("Velocidad", 1);
         if (animaciones != null) animaciones.SetBool("Atacando", false);
 
@@ -33,14 +32,17 @@ public class EnemigoPatrulla : EstadosAnimal
         {
             indice = (indice + 1) % CheckPoints.Length;
         }
+        agente.speed = 2f;
+        base.EstadoIdle();
     }
 
     public override void EstadoSeguir()
     {
-        base.EstadoSeguir();
-        if (animaciones != null) animaciones.SetFloat("Velocidad", 1);
+        if (animaciones != null) animaciones.SetFloat("Velocidad", 2);
         if (animaciones != null) animaciones.SetBool("Atacando", false);
         agente.SetDestination(target.position);
+        agente.speed = 4f;
+        base.EstadoSeguir();
     }
 
     public override void EstadoAtacar()
