@@ -1,3 +1,4 @@
+using FIMSpace.FSpine;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
@@ -23,6 +24,8 @@ public class AttackBehaviour : MonoBehaviour
     private LayerMask layer;
     [SerializeField]
     private Animator anim;
+
+    public FSpineAnimator spineAnimator;
 
     public bool isAttacking = false;
     public Vector3 initialPosition;
@@ -70,6 +73,7 @@ public class AttackBehaviour : MonoBehaviour
         }
 
         Vector3 ffg = attacker.transform.forward;
+        spineAnimator.SpineAnimatorAmount = 0;
 
         while (t < waitTime)
         {
@@ -86,6 +90,7 @@ public class AttackBehaviour : MonoBehaviour
             t += Time.deltaTime;
             yield return new WaitForSeconds(Time.deltaTime);
         }
+        spineAnimator.SpineAnimatorAmount = 1;
         isAttacking = false;
         damageDealed = false;
         attacker.transform.localPosition = initialPosition;
