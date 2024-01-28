@@ -47,6 +47,7 @@ public class FinishQuests : MonoBehaviour
     {
         if (input.actions["Action"].WasPressedThisFrame() && playerInside)
         {
+            QuestController.singleton.gameObject.GetComponent<Perro>().animator.SetTrigger("entregar");
             quests = QuestController.singleton.quests;
             UpdateQuestList();
         }

@@ -25,6 +25,7 @@ public class AttackBehaviour : MonoBehaviour
     private LayerMask layer;
     [SerializeField]
     private Animator anim;
+    public bool vivo = true;
 
     public FSpineAnimator spineAnimator;
 
@@ -117,7 +118,7 @@ public class AttackBehaviour : MonoBehaviour
 
     private void Update()
     {
-        if (input.actions["Attack"].WasPressedThisFrame() && !isAttacking)
+        if (input.actions["Attack"].WasPressedThisFrame() && !isAttacking && vivo)
         {
             StartCoroutine(Atacando());
         }
