@@ -5,8 +5,7 @@ using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
 
-public class EnemigoConejo : EstadosAnimal
-
+public class EnemigoGallina : EstadosAnimal
 {
     private NavMeshAgent agente;
     public Animator animaciones;
