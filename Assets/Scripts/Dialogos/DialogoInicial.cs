@@ -29,8 +29,12 @@ public class DialogoInicial : MonoBehaviour
                 indice = 0;
                 Jugar();
             }
-            imagenEscena.sprite = imagenesEscena[indice];
-            imagenEscena.sprite = imagenesTexto[indice];
+            else
+            {
+                imagenEscena.sprite = imagenesEscena[indice];
+                imagenTexto.sprite = imagenesTexto[indice];
+            }
+            
         }
     }
 
