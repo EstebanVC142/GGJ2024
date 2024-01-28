@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5672867155699078970}
   - component: {fileID: 8725100900024293535}
   - component: {fileID: 6841317768943594581}
+  - component: {fileID: 4192689655596958545}
   m_Layer: 0
   m_Name: Chilco
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.97, y: 0, z: 3.84}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -84,3 +85,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &4192689655596958545
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5040022985052573056}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.3
+  m_Height: 6.5119877
+  m_Direction: 1
+  m_Center: {x: -0.08, y: 2.83, z: 0.04}
