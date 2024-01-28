@@ -40,6 +40,8 @@ public class Movement : MonoBehaviour
 
     private bool blockSniff = false;
 
+    private FMOD.Studio.EventInstance instance;
+
     private void Update()
     {
         if (!attackBehaviour.isAttacking && vivo)
@@ -68,15 +70,19 @@ public class Movement : MonoBehaviour
             sniffProgression += Time.deltaTime;
             sniffEnergy -= Time.deltaTime * sniffRecuperation;
             slider.value = sniffEnergy;
+
             if (sniffEnergy <= 0.3f)
             {
                 blockSniff = true;
+                
             }
             if (sniffProgression >= sniffRate)
             {
                 sniffProgression = 0;
                 Olfateo.singleton.Olfatear();
+                
             }
+            
         }
         else
         {
@@ -88,7 +94,10 @@ public class Movement : MonoBehaviour
                 slider.value = sniffEnergy;
                 if (sniffEnergy >= 0.6f)
                     blockSniff = false;
+                   
             }
         }
     }
+
+   
 }
