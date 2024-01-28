@@ -25,12 +25,12 @@
                 },
                 {
                     "name": "Smell",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "4c9f7620-1978-414b-9eeb-96a9349d610c",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Attack",
@@ -185,7 +185,7 @@
                 {
                     "name": "",
                     "id": "eb5261ea-198f-4eeb-a7eb-2e1000a9e535",
-                    "path": "<Gamepad>/rightShoulder",
+                    "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -196,7 +196,18 @@
                 {
                     "name": "",
                     "id": "398d6588-0fca-46cf-abba-6abb697f9ad7",
-                    "path": "<Gamepad>/leftTrigger",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Smell",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a27c76a2-676e-45e5-98ca-b57066d3b718",
+                    "path": "<Keyboard>/leftCtrl",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

@@ -24,7 +24,7 @@ public class Vida : MonoBehaviour, ITakeDamage
             print("Muerto " + gameObject.name);
             eventoMorir.Invoke();
         }
-        else
+        else if (anim != null)
         {
             anim.SetTrigger("daño");
         }
