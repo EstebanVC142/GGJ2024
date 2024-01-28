@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
-public class EnemigoAnimal : EstadosAnimal
+
+public class EnemigoConejo : EstadosAnimal
+
 {
     private NavMeshAgent agente;
     public Animator animaciones;
@@ -18,33 +21,32 @@ public class EnemigoAnimal : EstadosAnimal
     public override void EstadoIdle()
     {
         base.EstadoIdle();
-        if(animaciones != null) animaciones.SetFloat("Velocidad", 0);
-        if (animaciones != null)  animaciones.SetBool("Atacando", false);
+        if (animaciones != null) animaciones.SetFloat("Velocidad", 0);
+        if (animaciones != null) animaciones.SetBool("Atacando", false);
         agente.SetDestination(transform.position);
-        
     }
 
     public override void EstadoSeguir()
     {
         base.EstadoSeguir();
-        if(animaciones != null) animaciones.SetFloat("Velocidad", 1);
-        if(animaciones != null) animaciones.SetBool("Atacando", false);
-        agente.SetDestination(target.position);
+        if (animaciones != null) animaciones.SetFloat("Velocidad", 1);
+        if (animaciones != null) animaciones.SetBool("Atacando", false);
+        agente.SetDestination(transform.position + (transform.position - target.position) * 3);
     }
 
     public override void EstadoAtacar()
     {
         base.EstadoAtacar();
-        if(animaciones != null) animaciones.SetFloat("Velocidad", 0);
-        if(animaciones != null) animaciones.SetBool("Atacando", true);
-        agente.SetDestination(transform.position);
-        transform.LookAt(target, Vector3.up);   
+        if (animaciones != null) animaciones.SetFloat("Velocidad", 1);
+        if (animaciones != null) animaciones.SetBool("Atacando", false);
+        agente.SetDestination(transform.position + (transform.position - target.position) * 3);
+            transform.LookAt(target, Vector3.up);
     }
 
     public override void EstadoMuerto()
     {
         base.EstadoMuerto();
-        if(animaciones != null) animaciones.SetBool("Vivo", false);
+        if (animaciones != null) animaciones.SetBool("Vivo", false);
         agente.enabled = false;
     }
 
