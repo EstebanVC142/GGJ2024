@@ -16,13 +16,13 @@ public class EnemigoAnimal : EstadosAnimal
         base.Awake();
         agente = GetComponent<NavMeshAgent>();
     }
-
     public override void EstadoIdle()
     {
         base.EstadoIdle();
         if(animaciones != null) animaciones.SetFloat("Velocidad", 0);
         if (animaciones != null)  animaciones.SetBool("Atacando", false);
         agente.SetDestination(transform.position);
+        
     }
 
     public override void EstadoSeguir()
@@ -30,7 +30,7 @@ public class EnemigoAnimal : EstadosAnimal
         base.EstadoSeguir();
         if(animaciones != null) animaciones.SetFloat("Velocidad", 1);
         if(animaciones != null) animaciones.SetBool("Atacando", false);
-        agente.SetDestination(target.position); 
+        agente.SetDestination(target.position);
     }
 
     public override void EstadoAtacar()
