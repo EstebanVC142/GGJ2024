@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 4980129559376396941}
   - component: {fileID: 3230674788643794837}
   - component: {fileID: 1167721569891186836}
+  - component: {fileID: 8164860153736805389}
   m_Layer: 0
   m_Name: Valla 0
   m_TagString: Untagged
@@ -115,3 +116,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8164860153736805389
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8413330700708400139}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.865347, y: 1.8274771, z: 0.15447573}
+  m_Center: {x: -1.788621, y: 0.71419066, z: -0.0000000037252899}

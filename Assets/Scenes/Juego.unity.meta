@@ -1,5 +1,10 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scripts/Player.meta
+guid: beca0d8000c3afa45ade6a5422c38be7
+folderAsset: yes
+========
 guid: 17c7cd08f395b7e4d9aa36c8d73f5324
+>>>>>>>> origin/EstebanVC:Assets/Scenes/Juego.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
