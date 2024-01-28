@@ -23,7 +23,7 @@ public class AttackBehaviour : MonoBehaviour
     private LayerMask layer;
 
     public bool isAttacking = false;
-    private Vector3 initialPosition;
+    public Vector3 initialPosition;
     private Vector3 attackHitBoxPos;
     private bool isStarted;
     bool damageDealed = false;
