@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -33,14 +34,15 @@ public class Movement : MonoBehaviour
     {
         Vector2 movementAxis = input.actions["Move"].ReadValue<Vector2>();
         Vector2 lookAxis = input.actions["Look"].ReadValue<Vector2>();
+        Vector3 movementDirection = new Vector3(movementAxis.x, 0, movementAxis.y);
+        Quaternion ra = transform.rotation;
 
-        rb.velocity = transform.forward * movementAxis.y * velocity;
-        if (!Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), groundDistance, layer))
+        if (movementDirection.sqrMagnitude > 0)
         {
-            rb.velocity -= new Vector3(0, gravity * Time.fixedDeltaTime, 0);
+            transform.forward = movementDirection.normalized;
+            transform.rotation = Quaternion.Lerp(ra, transform.rotation, 0.2f);
         }
-        else
-            rb.velocity -= new Vector3(0, 0, 0);
-        rb.rotation *= Quaternion.Euler(transform.rotation.x, lookAxis.x * lookSensibility * Time.fixedDeltaTime, transform.rotation.z);
+            
+        rb.velocity = transform.forward * movementDirection.magnitude * velocity + Vector3.up * rb.velocity.y;
     }
 }

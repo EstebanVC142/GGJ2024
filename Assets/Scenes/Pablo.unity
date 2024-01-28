@@ -719,6 +719,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraPosition: {fileID: 1604690082}
+  cameraOffset: {x: 0, y: 5, z: -10}
   followTime: 5
 --- !u!1001 &4112738341038597781
 PrefabInstance:
@@ -727,20 +728,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4112738341823212178, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+    - target: {fileID: 4112738341823212180, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
         type: 3}
-      propertyPath: questNames.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4112738341823212178, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
-        type: 3}
-      propertyPath: questNames.Array.data[3]
-      value: toro
-      objectReference: {fileID: 0}
-    - target: {fileID: 4112738341823212178, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
-        type: 3}
-      propertyPath: questNames.Array.data[4]
-      value: 
+      propertyPath: m_Constraints
+      value: 112
       objectReference: {fileID: 0}
     - target: {fileID: 4112738341823212181, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
         type: 3}
