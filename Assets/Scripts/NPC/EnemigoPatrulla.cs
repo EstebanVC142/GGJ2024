@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.AI;
 using static UnityEditor.Experimental.GraphView.GraphView;
@@ -15,6 +16,7 @@ public class EnemigoPatrulla : EstadosAnimal
     public float distanciaCheckpoints;
     private float distanciaCheckpoints2;
     public float daño = 3;
+    public Collider atackCollider;
 
     void Awake()
     {
@@ -41,7 +43,9 @@ public class EnemigoPatrulla : EstadosAnimal
     {
         if (animaciones != null) animaciones.SetFloat("Velocidad", 2);
         if (animaciones != null) animaciones.SetBool("Atacando", false);
+        if (!vivo) return;
         agente.SetDestination(target.position);
+        transform.LookAt(target, Vector3.up);
         agente.speed = 4f;
         base.EstadoSeguir();
     }
@@ -50,10 +54,29 @@ public class EnemigoPatrulla : EstadosAnimal
     {
         if (animaciones != null) animaciones.SetFloat("Velocidad", 0);
         if (animaciones != null) animaciones.SetBool("Atacando", true);
+        if (!vivo) return;
+        atackCollider.enabled = true;
         agente.SetDestination(transform.position);
         transform.LookAt(target, Vector3.up);
 
         base.EstadoAtacar();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            Perro.singleton.vida.CausarDaño(daño);
+        }
+    }
+
+    public override void CambiarEstado(Estados e)
+    {
+        base.CambiarEstado(e);
+        if (e != Estados.atacar)
+        {
+            atackCollider.enabled = false;
+        }
     }
 
     public override void EstadoMuerto()
