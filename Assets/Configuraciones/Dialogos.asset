@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e988485f3b4be1a4191861345365e0ee, type: 3}
+  m_Name: Dialogos
+  m_EditorClassIdentifier: 
+  tiempoLetra: 0.15
+  personajes:
+  - caras:
+    - cara: {fileID: -891581532, guid: fe5ae1c937b48b04d921b48637bdd5f0, type: 3}
+      letra: N
+  - caras:
+    - cara: {fileID: -469837587, guid: fe5ae1c937b48b04d921b48637bdd5f0, type: 3}
+      letra: P
+  - caras:
+    - cara: {fileID: 1908293459, guid: fe5ae1c937b48b04d921b48637bdd5f0, type: 3}
+      letra: E
+  - caras:
+    - cara: {fileID: 795492084, guid: fe5ae1c937b48b04d921b48637bdd5f0, type: 3}
+      letra: I
+  - caras:
+    - cara: {fileID: -990807867, guid: fe5ae1c937b48b04d921b48637bdd5f0, type: 3}
+      letra: X
+  - caras:
+    - cara: {fileID: -643851863, guid: fe5ae1c937b48b04d921b48637bdd5f0, type: 3}
+      letra: C
+  - caras:
+    - cara: {fileID: 528496906, guid: fe5ae1c937b48b04d921b48637bdd5f0, type: 3}
+      letra: M
+  - caras:
+    - cara: {fileID: -1871563986, guid: fe5ae1c937b48b04d921b48637bdd5f0, type: 3}
+      letra: G
+  - caras:
+    - cara: {fileID: 870426916, guid: fe5ae1c937b48b04d921b48637bdd5f0, type: 3}
+      letra: R
+  - caras:
+    - cara: {fileID: -467062172, guid: fe5ae1c937b48b04d921b48637bdd5f0, type: 3}
+      letra: T
+  teclaSkip: 32
+  teclaSkip2: 355
+  teclaSiguienteFrase: 32
+  teclaInicioDialogo: 98
+  teclaInicioDialogo2: 353
