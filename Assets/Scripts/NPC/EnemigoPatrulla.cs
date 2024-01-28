@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 [RequireComponent(typeof(NavMeshAgent))]
 
@@ -48,11 +49,12 @@ public class EnemigoPatrulla : EstadosAnimal
 
     public override void EstadoAtacar()
     {
-        base.EstadoAtacar();
         if (animaciones != null) animaciones.SetFloat("Velocidad", 0);
         if (animaciones != null) animaciones.SetBool("Atacando", true);
         agente.SetDestination(transform.position);
         transform.LookAt(target, Vector3.up);
+
+        base.EstadoAtacar();
     }
 
     public override void EstadoMuerto()

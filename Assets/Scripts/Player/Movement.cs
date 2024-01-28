@@ -36,12 +36,13 @@ public class Movement : MonoBehaviour
     private float sniffEnergy = 1;
     [SerializeField]
     private float sniffRecuperation = 0.2f;
+    public bool vivo = true;
 
     private bool blockSniff = false;
 
     private void Update()
     {
-        if (!attackBehaviour.isAttacking)
+        if (!attackBehaviour.isAttacking && vivo)
         Move();
     }
 
