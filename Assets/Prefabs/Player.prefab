@@ -131,9 +131,10 @@ GameObject:
   - component: {fileID: 4112738341823212178}
   - component: {fileID: 4112738341823212182}
   - component: {fileID: 1362906127}
+  - component: {fileID: 9041898455776794941}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -166,10 +167,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1.47
+  m_Radius: 0.71
+  m_Height: 1.77
   m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.15, z: 0}
 --- !u!54 &4112738341823212180
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -209,6 +210,12 @@ MonoBehaviour:
   rb: {fileID: 4112738341823212180}
   attackBehaviour: {fileID: 4112738341823212176}
   anim: {fileID: 9065687329331291457}
+  slider: {fileID: 0}
+  sniffRate: 2
+  sniffProgression: 0
+  sniffEnergy: 1
+  sniffRecuperation: 0.2
+  vivo: 1
 --- !u!114 &4112738341823212176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,6 +231,7 @@ MonoBehaviour:
   attacker: {fileID: 8146628313069903594}
   waitTime: 0.5
   maxDetectionDistance: 3
+  attackRadious: 2
   damage: 1
   curve:
     serializedVersion: 2
@@ -264,6 +272,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   anim: {fileID: 9065687329331291457}
+  vivo: 1
   spineAnimator: {fileID: 4112738341730105581}
   isAttacking: 0
   initialPosition: {x: 0, y: 0, z: 0}
@@ -284,7 +293,19 @@ MonoBehaviour:
   anim: {fileID: 9065687329331291457}
   eventoMorir:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1362906127}
+        m_TargetAssemblyTypeName: Perro, Assembly-CSharp
+        m_MethodName: Morir
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4112738341823212178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -342,7 +363,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 9065687329331291457}
+  movement: {fileID: 4112738341823212183}
+  attack: {fileID: 4112738341823212176}
   vida: {fileID: 4112738341823212179}
+--- !u!114 &9041898455776794941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4112738341823212905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cad62087269878541acad22d6828d77a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetivos:
+  - nombre: casa
+    posibles:
+    - {fileID: 0}
+  - nombre: toro
+    posibles:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+  - nombre: conejo
+    posibles:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+  - nombre: gato
+    posibles:
+    - {fileID: 0}
+    - {fileID: 0}
+  - nombre: gallina
+    posibles:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+  distanciaOlfateo: 25
+  objetivoActual: 1
+  particulas: {fileID: 4907606814587146300, guid: a069d0ab9e7a63a4fb359b7818597139,
+    type: 3}
 --- !u!1 &4112738342034434359
 GameObject:
   m_ObjectHideFlags: 0
