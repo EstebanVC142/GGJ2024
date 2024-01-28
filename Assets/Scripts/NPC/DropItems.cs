@@ -7,8 +7,6 @@ public class DropItems : MonoBehaviour
 {
     [SerializeField]
     private string itemToDrop;
-    [SerializeField]
-    private Vida vida;
 
     public void AddItem()
     {

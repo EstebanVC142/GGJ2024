@@ -152,7 +152,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &111322766
 GameObject:
@@ -189,7 +189,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemToDrop: conejo
-  vida: {fileID: 111322768}
 --- !u!114 &111322768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -309,7 +308,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &111322773
 MonoBehaviour:
@@ -359,7 +358,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemToDrop: conejo
-  vida: {fileID: 133450885}
 --- !u!114 &133450885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -479,7 +477,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &133450890
 MonoBehaviour:
@@ -795,7 +793,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemToDrop: toro
-  vida: {fileID: 407022508}
 --- !u!114 &407022508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -915,7 +912,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &407022513
 MonoBehaviour:
@@ -1016,7 +1013,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemToDrop: gato
-  vida: {fileID: 578618173}
 --- !u!114 &578618173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1136,7 +1132,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &578618178
 MonoBehaviour:
@@ -1199,7 +1195,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemToDrop: gallina
-  vida: {fileID: 588150056}
 --- !u!114 &588150056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1319,7 +1314,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &666570652
 GameObject:
@@ -1397,7 +1392,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &751842111
 GameObject:
@@ -1434,7 +1429,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemToDrop: gato
-  vida: {fileID: 751842113}
 --- !u!114 &751842113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1554,7 +1548,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &751842118
 MonoBehaviour:
@@ -2084,7 +2078,7 @@ PrefabInstance:
     - target: {fileID: 1818705358427507894, guid: ea7365a1fc31e714288d22398d0acc5a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1818705358427507894, guid: ea7365a1fc31e714288d22398d0acc5a,
         type: 3}
@@ -2424,7 +2418,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &819422492 stripped
 Transform:
@@ -2616,7 +2610,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.025, z: 0.02}
+  m_Size: {x: 0.02, y: 0.025, z: 0.03}
   m_Center: {x: 0, y: 0.005, z: 0}
 --- !u!1 &966078491
 GameObject:
@@ -2647,7 +2641,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1143820781
 GameObject:
@@ -3018,7 +3012,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1219483636
 MonoBehaviour:
@@ -3075,7 +3069,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemToDrop: conejo
-  vida: {fileID: 1219483636}
 --- !u!114 &1219483638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3118,7 +3111,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1258575961
 GameObject:
@@ -3305,7 +3298,7 @@ RectTransform:
   - {fileID: 1258575962}
   - {fileID: 848173118}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3349,6 +3342,182 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &1408940332
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 261701418913304949, guid: c4ab66e0dd5005c45827ee7cc60d9d57,
+        type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1408940334}
+    - target: {fileID: 261701418913304949, guid: c4ab66e0dd5005c45827ee7cc60d9d57,
+        type: 3}
+      propertyPath: eventoMorir.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 261701418913304949, guid: c4ab66e0dd5005c45827ee7cc60d9d57,
+        type: 3}
+      propertyPath: eventoMorir.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 261701418913304949, guid: c4ab66e0dd5005c45827ee7cc60d9d57,
+        type: 3}
+      propertyPath: eventoMorir.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 261701418913304949, guid: c4ab66e0dd5005c45827ee7cc60d9d57,
+        type: 3}
+      propertyPath: eventoMorir.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1408940336}
+    - target: {fileID: 261701418913304949, guid: c4ab66e0dd5005c45827ee7cc60d9d57,
+        type: 3}
+      propertyPath: eventoMorir.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1408940335}
+    - target: {fileID: 261701418913304949, guid: c4ab66e0dd5005c45827ee7cc60d9d57,
+        type: 3}
+      propertyPath: eventoMorir.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 261701418913304949, guid: c4ab66e0dd5005c45827ee7cc60d9d57,
+        type: 3}
+      propertyPath: eventoMorir.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 261701418913304949, guid: c4ab66e0dd5005c45827ee7cc60d9d57,
+        type: 3}
+      propertyPath: eventoMorir.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AddItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 261701418913304949, guid: c4ab66e0dd5005c45827ee7cc60d9d57,
+        type: 3}
+      propertyPath: eventoMorir.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Matar
+      objectReference: {fileID: 0}
+    - target: {fileID: 261701418913304949, guid: c4ab66e0dd5005c45827ee7cc60d9d57,
+        type: 3}
+      propertyPath: eventoMorir.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DropItems, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 261701418913304949, guid: c4ab66e0dd5005c45827ee7cc60d9d57,
+        type: 3}
+      propertyPath: eventoMorir.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: EnemigoConejo, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 261701418913304949, guid: c4ab66e0dd5005c45827ee7cc60d9d57,
+        type: 3}
+      propertyPath: eventoMorir.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 261701418913304949, guid: c4ab66e0dd5005c45827ee7cc60d9d57,
+        type: 3}
+      propertyPath: eventoMorir.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8892994506710222763, guid: c4ab66e0dd5005c45827ee7cc60d9d57,
+        type: 3}
+      propertyPath: m_Name
+      value: Conejo (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8892994506710222765, guid: c4ab66e0dd5005c45827ee7cc60d9d57,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8892994506710222765, guid: c4ab66e0dd5005c45827ee7cc60d9d57,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.2348003
+      objectReference: {fileID: 0}
+    - target: {fileID: 8892994506710222765, guid: c4ab66e0dd5005c45827ee7cc60d9d57,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.334
+      objectReference: {fileID: 0}
+    - target: {fileID: 8892994506710222765, guid: c4ab66e0dd5005c45827ee7cc60d9d57,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 17.070992
+      objectReference: {fileID: 0}
+    - target: {fileID: 8892994506710222765, guid: c4ab66e0dd5005c45827ee7cc60d9d57,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8892994506710222765, guid: c4ab66e0dd5005c45827ee7cc60d9d57,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8892994506710222765, guid: c4ab66e0dd5005c45827ee7cc60d9d57,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8892994506710222765, guid: c4ab66e0dd5005c45827ee7cc60d9d57,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8892994506710222765, guid: c4ab66e0dd5005c45827ee7cc60d9d57,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8892994506710222765, guid: c4ab66e0dd5005c45827ee7cc60d9d57,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8892994506710222765, guid: c4ab66e0dd5005c45827ee7cc60d9d57,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c4ab66e0dd5005c45827ee7cc60d9d57, type: 3}
+--- !u!1 &1408940333 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8892994506710222763, guid: c4ab66e0dd5005c45827ee7cc60d9d57,
+    type: 3}
+  m_PrefabInstance: {fileID: 1408940332}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1408940334 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2792407110824280646, guid: c4ab66e0dd5005c45827ee7cc60d9d57,
+    type: 3}
+  m_PrefabInstance: {fileID: 1408940332}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1408940335 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8892994506710222762, guid: c4ab66e0dd5005c45827ee7cc60d9d57,
+    type: 3}
+  m_PrefabInstance: {fileID: 1408940332}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1408940333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3547caaa850913c4dbba61204d72f4c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1408940336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1408940333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01de45cf62983ba4d85e2e841dec7f81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToDrop: conejo
 --- !u!1 &1489965718
 GameObject:
   m_ObjectHideFlags: 0
@@ -3397,7 +3566,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemToDrop: gallina
-  vida: {fileID: 1489965721}
 --- !u!114 &1489965721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3517,7 +3685,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1490485786
 GameObject:
@@ -3616,7 +3784,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1490485791
 MonoBehaviour:
@@ -3701,7 +3869,7 @@ MonoBehaviour:
   anim: {fileID: 500890770}
   dir: 0
   rangoPatearIdle: {x: 3, y: 15}
-  rangoAtaque: {x: 1, y: 8}
+  rangoAtaque: {x: 1, y: 3}
   nav: {fileID: 1599492299}
   "colDa\xF1os":
   - {fileID: 894525080}
@@ -3721,7 +3889,7 @@ Transform:
   m_Children:
   - {fileID: 500890769}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!195 &1599492299
 NavMeshAgent:
@@ -3855,7 +4023,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemToDrop: toro
-  vida: {fileID: 1599492301}
 --- !u!114 &1599492306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3904,7 +4071,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemToDrop: gallina
-  vida: {fileID: 1600159966}
 --- !u!114 &1600159966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4024,7 +4190,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1600159971
 MonoBehaviour:
@@ -4189,7 +4355,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1977771486
 GameObject:
@@ -4275,7 +4441,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 36.7, y: 0, z: 0}
 --- !u!114 &1977771490
 MonoBehaviour:
@@ -4359,7 +4525,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemToDrop: toro
-  vida: {fileID: 2055750558}
 --- !u!114 &2055750558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4479,7 +4644,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2055750563
 MonoBehaviour:
@@ -4813,7 +4978,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemToDrop: toro
-  vida: {fileID: 2145535345}
 --- !u!114 &2145535345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4933,7 +5097,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2145535350
 MonoBehaviour:
@@ -4963,7 +5127,7 @@ PrefabInstance:
     - target: {fileID: 4112738341823212181, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4112738341823212181, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
         type: 3}
