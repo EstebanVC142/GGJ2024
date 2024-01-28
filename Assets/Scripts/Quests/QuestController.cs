@@ -5,18 +5,13 @@ using TMPro;
 
 public class QuestController : MonoBehaviour
 {
+    public Dictionary<string, bool> quests = new Dictionary<string, bool>();
     [SerializeField]
-    private List<string> questNames = new List<string>();
-    [SerializeField]
-    private TextMeshProUGUI questText;
-    private Dictionary<string, bool> quests = new Dictionary<string, bool>();
+    private FinishQuests FinishQuests;
 
     private void Awake()
     {
-        for (int i = 0; i < questNames.Count; i++)
-        {
-            quests.Add(questNames[i], false);
-        }
+
     }
 
     public void CompleteQuest(string questName)
@@ -25,14 +20,6 @@ public class QuestController : MonoBehaviour
         {
             quests[questName] = true;
             Debug.Log($"item completado: {questName}");
-        }
-    }
-
-    private void UpdateQuestList()
-    {
-        if (quests.Count > 0)
-        {
-
         }
     }
 }
