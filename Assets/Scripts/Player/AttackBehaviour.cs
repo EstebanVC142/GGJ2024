@@ -21,6 +21,8 @@ public class AttackBehaviour : MonoBehaviour
     private PlayerInput input;
     [SerializeField]
     private LayerMask layer;
+    [SerializeField]
+    private Animator anim;
 
     public bool isAttacking = false;
     public Vector3 initialPosition;
@@ -42,6 +44,7 @@ public class AttackBehaviour : MonoBehaviour
     {
         float t = 0;
         isAttacking = true;
+        anim.SetTrigger("atacar");
         Transform closestEnemy = null;
         foreach (var enemy in FindObjectsOfType<Vida>())
         {
