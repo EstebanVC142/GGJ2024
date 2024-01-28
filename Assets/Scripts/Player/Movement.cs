@@ -26,7 +26,7 @@ public class Movement : MonoBehaviour
     [SerializeField]
     private Animator anim;
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (!attackBehaviour.isAttacking)
         Move();
@@ -45,9 +45,12 @@ public class Movement : MonoBehaviour
             transform.rotation = Quaternion.Lerp(ra, transform.rotation, 0.2f);
         }
         anim.SetBool("correr", input.actions["Run"].IsPressed());
+        anim.SetFloat("olfateo", input.actions["Smell"].ReadValue<float>());
         
         if (input.actions["Run"].IsPressed())
             rb.velocity = transform.forward * movementDirection.magnitude * (velocity * 2) + Vector3.up * rb.velocity.y;
+        else if (input.actions["Smell"].IsPressed())
+            rb.velocity = transform.forward * movementDirection.magnitude * (velocity / 2) + Vector3.up * rb.velocity.y;
         else
             rb.velocity = transform.forward * movementDirection.magnitude * velocity + Vector3.up * rb.velocity.y;
 

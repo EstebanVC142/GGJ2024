@@ -99,7 +99,7 @@ public class AttackBehaviour : MonoBehaviour
     private void DealDamage()
     {
         attackHitBoxPos = (attacker.transform.forward * 1f) + new Vector3(attacker.transform.position.x, attacker.transform.position.y, attacker.transform.position.z);
-        Collider[] colliders = Physics.OverlapBox(attackHitBoxPos, attacker.transform.localScale / 4, Quaternion.identity, layer);
+        Collider[] colliders = Physics.OverlapBox(attackHitBoxPos, attacker.transform.localScale / 2, Quaternion.identity, layer);
 
         if (colliders.Length > 0)
         {
@@ -126,6 +126,6 @@ public class AttackBehaviour : MonoBehaviour
     {
         Gizmos.color = Color.red;
         if (damageDealed)
-            Gizmos.DrawCube(attackHitBoxPos, transform.localScale / 2);
+            Gizmos.DrawCube(attackHitBoxPos, transform.localScale);
     }
 }
