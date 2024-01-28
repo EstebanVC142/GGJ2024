@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 1362906127}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -209,6 +209,7 @@ MonoBehaviour:
   rb: {fileID: 4112738341823212180}
   attackBehaviour: {fileID: 4112738341823212176}
   anim: {fileID: 9065687329331291457}
+  slider: {fileID: 0}
   sniffRate: 2
   sniffProgression: 0
   sniffEnergy: 1
