@@ -5,9 +5,18 @@ using TMPro;
 
 public class QuestController : MonoBehaviour
 {
+    public static QuestController singleton;
     public Dictionary<string, bool> quests = new Dictionary<string, bool>();
     [SerializeField]
     private FinishQuests FinishQuests;
+
+    private void Awake()
+    {
+        if (singleton == null)
+            singleton = this;
+        else
+            DestroyImmediate(gameObject);
+    }
 
     private void Start()
     {

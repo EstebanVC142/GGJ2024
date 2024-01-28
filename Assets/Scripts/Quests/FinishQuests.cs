@@ -16,6 +16,7 @@ public class FinishQuests : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI dialogText;
     public string actualObjetive;
+    private bool playerInside = false;
 
     private void Awake()
     {
@@ -26,15 +27,28 @@ public class FinishQuests : MonoBehaviour
         UpdateQuestList();
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (input.actions["Action"].WasPressedThisFrame())
+        if (other.CompareTag("Player"))
         {
-            if (other.TryGetComponent(out QuestController player))
-            {
-                quests = player.quests;
-                UpdateQuestList();
-            }
+            playerInside = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInside = false;
+        }
+    }
+
+    private void Update()
+    {
+        if (input.actions["Action"].WasPressedThisFrame() && playerInside)
+        {
+            quests = QuestController.singleton.quests;
+            UpdateQuestList();
         }
     }
 

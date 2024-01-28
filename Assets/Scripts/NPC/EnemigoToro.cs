@@ -19,7 +19,7 @@ public class EnemigoToro : EstadosAnimal
 
     public override void EstadoAtacar()
     {
-        base.EstadoAtacar();
+        if (!vivo) return;
         nav.SetDestination(transform.position);
         //anim.SetFloat("Velocidad", nav.velocity.sqrMagnitude);
 
@@ -48,6 +48,7 @@ public class EnemigoToro : EstadosAnimal
             }
             tiempoAtaque = Time.time + Random.Range(rangoAtaque.x, rangoAtaque.y);
         }
+        base.EstadoAtacar();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -58,18 +59,25 @@ public class EnemigoToro : EstadosAnimal
         }
     }
 
+    public void Morir()
+    {
+        vivo = false;
+        anim.SetBool("Vivo", vivo);
+        CambiarEstado(Estados.muerto);
+    }
+
     public override void CambiarEstado(Estados e)
     {
         base.CambiarEstado(e);
         switch (e)
         {
             case Estados.idle:
+                anim.SetFloat("Velocidad", 0);
                 break;
             case Estados.seguir:
                 break;
             case Estados.atacar:
                 anim.SetFloat("Velocidad", 0);
-                print("frené");
                 break;
             case Estados.muerto:
                 break;
@@ -80,7 +88,6 @@ public class EnemigoToro : EstadosAnimal
 
     public override void EstadoIdle()
     {
-        base.EstadoIdle();
 
         if (Time.time > patearIdle)
         {
@@ -88,6 +95,7 @@ public class EnemigoToro : EstadosAnimal
             patearIdle = Time.time + Random.Range(rangoPatearIdle.x, rangoPatearIdle.y);
         }
 
+        base.EstadoIdle();
     }
 
     public override void EstadoMuerto()
@@ -96,10 +104,9 @@ public class EnemigoToro : EstadosAnimal
     }
     public override void EstadoSeguir()
     {
-        //if (estado != Estados.seguir) return;
+        if (!vivo) return;
         nav.SetDestination(target.position);
         anim.SetFloat("Velocidad", nav.velocity.sqrMagnitude);
-        print("velocidad");
         base.EstadoSeguir();
     }
 
