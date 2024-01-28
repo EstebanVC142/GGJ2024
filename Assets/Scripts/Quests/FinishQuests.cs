@@ -41,7 +41,7 @@ public class FinishQuests : MonoBehaviour
     private void UpdateQuestList()
     {
         questText.text = "";
-        actualObjetive = questNames[0];
+        actualObjetive = questNames[1];
         if (quests.Count > 0)
         {
             foreach (var quest in quests)
@@ -50,6 +50,7 @@ public class FinishQuests : MonoBehaviour
                 if (quest.Value && questNames.IndexOf(quest.Key) < questNames.Count - 1)
                 {
                     actualObjetive = questNames[questNames.IndexOf(quest.Key) + 1];
+                    Olfateo.singleton.objetivoActual = questNames.IndexOf(quest.Key) + 1;
                 }
                 else if (questNames.IndexOf(quest.Key) == questNames.Count - 1 && quest.Value)
                 {

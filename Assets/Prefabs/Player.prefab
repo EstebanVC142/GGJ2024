@@ -209,6 +209,10 @@ MonoBehaviour:
   rb: {fileID: 4112738341823212180}
   attackBehaviour: {fileID: 4112738341823212176}
   anim: {fileID: 9065687329331291457}
+  sniffRate: 2
+  sniffProgression: 0
+  sniffEnergy: 1
+  sniffRecuperation: 0.2
 --- !u!114 &4112738341823212176
 MonoBehaviour:
   m_ObjectHideFlags: 0
