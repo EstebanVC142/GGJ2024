@@ -23,6 +23,8 @@ public class Movement : MonoBehaviour
     private Rigidbody rb;
     [SerializeField]
     private AttackBehaviour attackBehaviour;
+    [SerializeField]
+    private Animator anim;
 
     private void FixedUpdate()
     {
@@ -42,7 +44,12 @@ public class Movement : MonoBehaviour
             transform.forward = movementDirection.normalized;
             transform.rotation = Quaternion.Lerp(ra, transform.rotation, 0.2f);
         }
-            
-        rb.velocity = transform.forward * movementDirection.magnitude * velocity + Vector3.up * rb.velocity.y;
+        anim.SetBool("correr", input.actions["Run"].IsPressed());
+        
+        if (input.actions["Run"].IsPressed())
+            rb.velocity = transform.forward * movementDirection.magnitude * (velocity * 2) + Vector3.up * rb.velocity.y;
+        else
+            rb.velocity = transform.forward * movementDirection.magnitude * velocity + Vector3.up * rb.velocity.y;
+
     }
 }

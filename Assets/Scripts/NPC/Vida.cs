@@ -7,6 +7,7 @@ public class Vida : MonoBehaviour, ITakeDamage
 {
     public float vidaInicial;
     public float vidaActual;
+    public Animator anim;
     public UnityEvent eventoMorir;
 
 
@@ -22,6 +23,10 @@ public class Vida : MonoBehaviour, ITakeDamage
         {
             print("Muerto " + gameObject.name);
             eventoMorir.Invoke();
+        }
+        else
+        {
+            anim.SetTrigger("daño");
         }
     }
 
