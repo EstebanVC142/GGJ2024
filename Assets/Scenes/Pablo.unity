@@ -665,14 +665,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1977771486}
-  m_LocalRotation: {x: 0.25355306, y: -0, z: -0, w: 0.9673215}
-  m_LocalPosition: {x: 0, y: 3.6290002, z: -5.41}
+  m_LocalRotation: {x: 0.31482393, y: -0, z: -0, w: 0.9491501}
+  m_LocalPosition: {x: 0, y: 5.36, z: -5.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 29.376, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 36.7, y: 0, z: 0}
 --- !u!114 &1977771490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -719,7 +719,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraPosition: {fileID: 1604690082}
-  cameraOffset: {x: 0, y: 5, z: -10}
   followTime: 5
 --- !u!1001 &4112738341038597781
 PrefabInstance:
@@ -728,11 +727,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4112738341823212180, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 112
-      objectReference: {fileID: 0}
     - target: {fileID: 4112738341823212181, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
         type: 3}
       propertyPath: m_RootOrder
