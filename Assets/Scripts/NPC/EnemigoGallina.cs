@@ -9,7 +9,6 @@ public class EnemigoGallina : EstadosAnimal
 {
     private NavMeshAgent agente;
     public Animator animaciones;
-
     void Awake()
     {
         base.Awake();

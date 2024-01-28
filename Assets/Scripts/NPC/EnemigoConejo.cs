@@ -10,7 +10,6 @@ public class EnemigoConejo : EstadosAnimal
 {
     private NavMeshAgent agente;
     public Animator animaciones;
-
     void Awake()
     {
         base.Awake();
