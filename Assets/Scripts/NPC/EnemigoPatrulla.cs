@@ -41,6 +41,7 @@ public class EnemigoPatrulla : EstadosAnimal
         if (animaciones != null) animaciones.SetFloat("Velocidad", 2);
         if (animaciones != null) animaciones.SetBool("Atacando", false);
         agente.SetDestination(target.position);
+        transform.LookAt(target, Vector3.up);
         agente.speed = 4f;
         base.EstadoSeguir();
     }

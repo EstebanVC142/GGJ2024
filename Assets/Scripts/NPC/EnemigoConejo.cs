@@ -22,7 +22,6 @@ public class EnemigoConejo : EstadosAnimal
     {
         base.EstadoIdle();
         if (animaciones != null) animaciones.SetFloat("Velocidad", 0);
-        if (animaciones != null) animaciones.SetBool("Atacando", false);
         agente.SetDestination(transform.position);
     }
 
@@ -30,7 +29,6 @@ public class EnemigoConejo : EstadosAnimal
     {
         base.EstadoSeguir();
         if (animaciones != null) animaciones.SetFloat("Velocidad", 1);
-        if (animaciones != null) animaciones.SetBool("Atacando", false);
         agente.SetDestination(transform.position + (transform.position - target.position) * 3);
     }
 
@@ -38,9 +36,7 @@ public class EnemigoConejo : EstadosAnimal
     {
         base.EstadoAtacar();
         if (animaciones != null) animaciones.SetFloat("Velocidad", 1);
-        if (animaciones != null) animaciones.SetBool("Atacando", false);
         agente.SetDestination(transform.position + (transform.position - target.position) * 3);
-            transform.LookAt(target, Vector3.up);
     }
 
     public override void EstadoMuerto()
