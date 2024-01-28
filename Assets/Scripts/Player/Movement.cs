@@ -60,13 +60,17 @@ public class Movement : MonoBehaviour
 
         if (input.actions["Run"].IsPressed())
             rb.velocity = transform.forward * movementDirection.magnitude * (velocity * 2) + Vector3.up * rb.velocity.y;
-        else if (input.actions["Smell"].IsPressed() && !blockSniff && sniffEnergy > 0)
+        else if (input.actions["Smell"].IsPressed() && !blockSniff)
         {
             rb.velocity = transform.forward * movementDirection.magnitude * (velocity / 2) + Vector3.up * rb.velocity.y;
             anim.SetFloat("olfateo", input.actions["Smell"].ReadValue<float>());
             sniffProgression += Time.deltaTime;
             sniffEnergy -= Time.deltaTime * sniffRecuperation;
             slider.value = sniffEnergy;
+            if (sniffEnergy <= 0.3f)
+            {
+                blockSniff = true;
+            }
             if (sniffProgression >= sniffRate)
             {
                 sniffProgression = 0;
@@ -85,11 +89,5 @@ public class Movement : MonoBehaviour
                     blockSniff = false;
             }
         }
-
-        if (input.actions["Smell"].WasReleasedThisFrame() && sniffEnergy <= 0.3f || sniffEnergy <= 0)
-        {
-            blockSniff = true;
-        }
-
     }
 }
