@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
 
@@ -22,6 +21,7 @@ public class EnemigoConejo : EstadosAnimal
     {
         base.EstadoIdle();
         if (animaciones != null) animaciones.SetFloat("Velocidad", 0);
+        if (!vivo) return;
         agente.SetDestination(transform.position);
     }
 
@@ -29,6 +29,7 @@ public class EnemigoConejo : EstadosAnimal
     {
         base.EstadoSeguir();
         if (animaciones != null) animaciones.SetFloat("Velocidad", 1);
+        if (!vivo) return;
         agente.SetDestination(transform.position + (transform.position - target.position) * 3);
     }
 
@@ -36,6 +37,7 @@ public class EnemigoConejo : EstadosAnimal
     {
         base.EstadoAtacar();
         if (animaciones != null) animaciones.SetFloat("Velocidad", 1);
+        if (!vivo) return;
         agente.SetDestination(transform.position + (transform.position - target.position) * 3);
     }
 
@@ -43,6 +45,7 @@ public class EnemigoConejo : EstadosAnimal
     {
         base.EstadoMuerto();
         if (animaciones != null) animaciones.SetBool("Vivo", false);
+        vivo = false;
         agente.enabled = false;
     }
 

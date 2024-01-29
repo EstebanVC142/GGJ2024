@@ -17,4 +17,11 @@ public class Dialogador : MonoBehaviour
             }
         }
     }
+
+    public void IniciarDialogo()
+    {
+        Debug.Log("inicia dialogo" + estados[estadoActual].frases.Length);
+
+        StartCoroutine(ControlDialogos.singleton.Decir(estados[estadoActual].frases));
+    }
 }
