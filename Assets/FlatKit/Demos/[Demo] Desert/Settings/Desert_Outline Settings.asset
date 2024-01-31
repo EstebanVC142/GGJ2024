@@ -61,11 +61,11 @@ MonoBehaviour:
   m_Name: Desert_Outline Settings
   m_EditorClassIdentifier: 
   edgeColor: {r: 0, g: 0, b: 0, a: 1}
-  thickness: 2
+  thickness: 1
   resolutionInvariant: 0
   useDepth: 1
   useNormals: 1
-  useColor: 1
+  useColor: 0
   minDepthThreshold: 12
   maxDepthThreshold: 15
   minNormalsThreshold: 0.25
@@ -74,4 +74,4 @@ MonoBehaviour:
   maxColorThreshold: 0.1
   renderEvent: 550
   outlineOnly: 0
-  applyInSceneView: 1
+  applyInSceneView: 0
