@@ -7,13 +7,16 @@ using UnityEngine.SceneManagement;
 public class DialogoInicial : MonoBehaviour
 {
     [Header("ImagenesIniciales")]
-    public Sprite[] imagenes;
+    public Sprite[] imagenesEscena;
+    public Sprite[] imagenesTexto;
     private int indice = 0;
-    public Image imagen;
+    public Image imagenEscena;
+    public Image imagenTexto;
 
     private void Start()
     {
-        imagen.sprite = imagenes[indice];
+        imagenEscena.sprite = imagenesEscena[indice];
+        imagenTexto.sprite = imagenesTexto[indice];
     }
 
     void Update()
@@ -21,17 +24,22 @@ public class DialogoInicial : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             indice++;
-            if (indice >= imagenes.Length)
+            if (indice >= imagenesEscena.Length)
             {
                 indice = 0;
                 Jugar();
             }
-            imagen.sprite = imagenes[indice];
+            else
+            {
+                imagenEscena.sprite = imagenesEscena[indice];
+                imagenTexto.sprite = imagenesTexto[indice];
+            }
+            
         }
     }
 
     public void Jugar()
     {
-        SceneManager.LoadScene("Juego");
+        SceneManager.LoadScene("Mundo");
     }
 }
