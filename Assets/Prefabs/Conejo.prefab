@@ -1,0 +1,295 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8892994506710222763
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8892994506710222765}
+  - component: {fileID: 8892994506710222760}
+  - component: {fileID: 8892994506710222761}
+  - component: {fileID: 8892994506710222762}
+  - component: {fileID: 261701418913304949}
+  - component: {fileID: 416292037912303195}
+  - component: {fileID: 2819558603730674818}
+  - component: {fileID: 8926225027781819663}
+  m_Layer: 0
+  m_Name: Conejo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8892994506710222765
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8892994506710222763}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 21.62, y: 1, z: 2.29}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2398771556764984751}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &8892994506710222760
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8892994506710222763}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!195 &8892994506710222761
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8892994506710222763}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 1
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &8892994506710222762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8892994506710222763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3547caaa850913c4dbba61204d72f4c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  estado: 0
+  distaciaSeguir: 13.2
+  distaciaAtacar: 1.54
+  distaciaEscapar: 13.7
+  autoseleccionarTarget: 1
+  target: {fileID: 0}
+  distancia: 0
+  vivo: 1
+  animaciones: {fileID: 2792407110824280646}
+  "da\xF1o": 0
+--- !u!114 &261701418913304949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8892994506710222763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daddf1dbcdf4e2a4ca4e2454841512ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vidaInicial: 2
+  vidaActual: 0
+  anim: {fileID: 2792407110824280646}
+  eventoMorir:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 416292037912303195}
+        m_TargetAssemblyTypeName: DropItems, Assembly-CSharp
+        m_MethodName: AddItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8892994506710222762}
+        m_TargetAssemblyTypeName: EnemigoConejo, Assembly-CSharp
+        m_MethodName: Matar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &416292037912303195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8892994506710222763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01de45cf62983ba4d85e2e841dec7f81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToDrop: conejo
+--- !u!114 &2819558603730674818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8892994506710222763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 783a0b796e474724488154774b53a211, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tipoObjetivo: 2
+--- !u!114 &8926225027781819663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8892994506710222763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04d2c1931f4955b4b807f5791e42d48b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  estadoActual: 0
+  estados:
+  - frases:
+    - texto: ya tienes la pata de conejo, vuelve a casa
+      personaje: 4
+--- !u!1001 &8892994507995877698
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8892994506710222765}
+    m_Modifications:
+    - target: {fileID: 2550004260062694430, guid: a5f60b1575133de4095eb012b1aa2b43,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.04965178
+      objectReference: {fileID: 0}
+    - target: {fileID: 2550004260062694430, guid: a5f60b1575133de4095eb012b1aa2b43,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.031085705
+      objectReference: {fileID: 0}
+    - target: {fileID: 4154401128472369985, guid: a5f60b1575133de4095eb012b1aa2b43,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.55230206
+      objectReference: {fileID: 0}
+    - target: {fileID: 4154401128472369985, guid: a5f60b1575133de4095eb012b1aa2b43,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.35582197
+      objectReference: {fileID: 0}
+    - target: {fileID: 4154401128472369985, guid: a5f60b1575133de4095eb012b1aa2b43,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.35257185
+      objectReference: {fileID: 0}
+    - target: {fileID: 4154401128472369985, guid: a5f60b1575133de4095eb012b1aa2b43,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.66636795
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866982820351700567, guid: a5f60b1575133de4095eb012b1aa2b43,
+        type: 3}
+      propertyPath: m_Name
+      value: Conejo (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6494302154731402477, guid: a5f60b1575133de4095eb012b1aa2b43,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6494302154731402477, guid: a5f60b1575133de4095eb012b1aa2b43,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6494302154731402477, guid: a5f60b1575133de4095eb012b1aa2b43,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6494302154731402477, guid: a5f60b1575133de4095eb012b1aa2b43,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6494302154731402477, guid: a5f60b1575133de4095eb012b1aa2b43,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6494302154731402477, guid: a5f60b1575133de4095eb012b1aa2b43,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6494302154731402477, guid: a5f60b1575133de4095eb012b1aa2b43,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6494302154731402477, guid: a5f60b1575133de4095eb012b1aa2b43,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6494302154731402477, guid: a5f60b1575133de4095eb012b1aa2b43,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6494302154731402477, guid: a5f60b1575133de4095eb012b1aa2b43,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6494302154731402477, guid: a5f60b1575133de4095eb012b1aa2b43,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a5f60b1575133de4095eb012b1aa2b43, type: 3}
+--- !u!4 &2398771556764984751 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6494302154731402477, guid: a5f60b1575133de4095eb012b1aa2b43,
+    type: 3}
+  m_PrefabInstance: {fileID: 8892994507995877698}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2792407110824280646 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6749449003218031364, guid: a5f60b1575133de4095eb012b1aa2b43,
+    type: 3}
+  m_PrefabInstance: {fileID: 8892994507995877698}
+  m_PrefabAsset: {fileID: 0}

@@ -1780,6 +1780,7 @@ GameObject:
   - component: {fileID: 4962029057832459680}
   - component: {fileID: 406552588}
   - component: {fileID: 406552590}
+  - component: {fileID: 5060671032960002497}
   m_Layer: 0
   m_Name: Perro2
   m_TagString: Player
@@ -2336,6 +2337,22 @@ MonoBehaviour:
   DebugRays: 0
   AnimationStyle: 0
   ConstantParentalAxisUpdate: 1
+--- !u!114 &5060671032960002497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5196523893676041739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f4a73aeaf48c14479046cacc37440ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emitter:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &5287897205927690156
 GameObject:
   m_ObjectHideFlags: 0

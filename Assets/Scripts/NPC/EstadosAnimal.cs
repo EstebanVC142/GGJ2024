@@ -46,7 +46,7 @@ public class EstadosAnimal : MonoBehaviour
                 EstadoIdle();
                 break;
             case Estados.seguir:
-                transform.LookAt(target, Vector3.up);
+                //transform.LookAt(target, Vector3.up);
                 EstadoSeguir();
                 break;
             case Estados.atacar:
@@ -60,7 +60,7 @@ public class EstadosAnimal : MonoBehaviour
         }
     }
 
-    public void CambiarEstado(Estados e)
+    public virtual void CambiarEstado(Estados e)
     {
         switch (e)
         {

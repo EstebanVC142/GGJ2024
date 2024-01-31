@@ -14,6 +14,7 @@ public class AttackBehaviour : MonoBehaviour
     private float waitTime = 1;
     [SerializeField]
     private float maxDetectionDistance = 8;
+    public float attackRadious;
     [SerializeField]
     private int damage = 1;
     public AnimationCurve curve;
@@ -24,6 +25,7 @@ public class AttackBehaviour : MonoBehaviour
     private LayerMask layer;
     [SerializeField]
     private Animator anim;
+    public bool vivo = true;
 
     public FSpineAnimator spineAnimator;
 
@@ -99,7 +101,7 @@ public class AttackBehaviour : MonoBehaviour
     private void DealDamage()
     {
         attackHitBoxPos = (attacker.transform.forward * 1f) + new Vector3(attacker.transform.position.x, attacker.transform.position.y, attacker.transform.position.z);
-        Collider[] colliders = Physics.OverlapBox(attackHitBoxPos, attacker.transform.localScale / 4, Quaternion.identity, layer);
+        Collider[] colliders = Physics.OverlapSphere(attackHitBoxPos, attackRadious, layer);
 
         if (colliders.Length > 0)
         {
@@ -116,7 +118,7 @@ public class AttackBehaviour : MonoBehaviour
 
     private void Update()
     {
-        if (input.actions["Attack"].WasPressedThisFrame() && !isAttacking)
+        if (input.actions["Attack"].WasPressedThisFrame() && !isAttacking && vivo)
         {
             StartCoroutine(Atacando());
         }
@@ -126,6 +128,6 @@ public class AttackBehaviour : MonoBehaviour
     {
         Gizmos.color = Color.red;
         if (damageDealed)
-            Gizmos.DrawCube(attackHitBoxPos, transform.localScale / 2);
+            Gizmos.DrawSphere(attackHitBoxPos, attackRadious);
     }
 }

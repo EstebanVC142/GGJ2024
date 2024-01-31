@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5759152381387271247}
   - component: {fileID: 8665846002711913450}
   - component: {fileID: 6892673809098282784}
+  - component: {fileID: 8814226994314823826}
   m_Layer: 0
   m_Name: YarumoVerde
   m_TagString: Untagged
@@ -84,3 +85,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &8814226994314823826
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4947008749276411637}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.39
+  m_Height: 17.261381
+  m_Direction: 1
+  m_Center: {x: 0.60521793, y: 7.224083, z: -0.02716589}

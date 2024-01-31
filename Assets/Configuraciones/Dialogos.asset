@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e988485f3b4be1a4191861345365e0ee, type: 3}
   m_Name: Dialogos
   m_EditorClassIdentifier: 
-  tiempoLetra: 0.15
+  tiempoLetra: 0.05
   personajes:
   - caras:
     - cara: {fileID: -891581532, guid: fe5ae1c937b48b04d921b48637bdd5f0, type: 3}
