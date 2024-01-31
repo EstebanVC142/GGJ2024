@@ -40,6 +40,6 @@ public class DialogoInicial : MonoBehaviour
 
     public void Jugar()
     {
-        SceneManager.LoadScene("Mundo");
+        SceneManager.LoadScene("Morion3");
     }
 }

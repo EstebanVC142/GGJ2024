@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Mundo.unity
     guid: 900da74ecfc95b7468d8c603f41bed8b
+  - enabled: 1
+    path: Assets/Scenes/Morion3.unity
+    guid: a346bbf3da560ce4b8c795b7d2990dfd
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 64b82e8321283894f8701ad57effa1df,
       type: 2}
