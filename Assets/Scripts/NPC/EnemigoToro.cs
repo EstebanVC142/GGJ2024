@@ -72,6 +72,7 @@ public class EnemigoToro : EstadosAnimal
         switch (e)
         {
             case Estados.idle:
+                nav.SetDestination(transform.position);
                 anim.SetFloat("Velocidad", 0);
                 break;
             case Estados.seguir:
