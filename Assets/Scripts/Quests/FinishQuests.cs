@@ -12,11 +12,13 @@ public class FinishQuests : MonoBehaviour
     [SerializeField]
     private PlayerInput input;
     [SerializeField]
-    private TextMeshProUGUI questText;
-    [SerializeField]
     private TextMeshProUGUI dialogText;
+    public GameObject dialogPanel;
+    public List<Dialogador> dialogador = new List<Dialogador>();
     public string actualObjetive;
     private bool playerInside = false;
+    public bool gano = false;
+    public int dialogIndex;
 
     private void Awake()
     {
@@ -53,15 +55,18 @@ public class FinishQuests : MonoBehaviour
         }
     }
 
+    public void ObjetivoCasa()
+    {
+        StartCoroutine(ShowMessage("vuelve con tu presa a la casa"));
+    }
+
     private void UpdateQuestList()
     {
-        questText.text = "";
         actualObjetive = questNames[1];
         if (quests.Count > 0)
         {
             foreach (var quest in quests)
             {
-                questText.text += $"- {quest.Key}: {quest.Value}\n";
                 if (quest.Value && questNames.IndexOf(quest.Key) < questNames.Count - 1)
                 {
                     actualObjetive = questNames[questNames.IndexOf(quest.Key) + 1];
@@ -69,10 +74,25 @@ public class FinishQuests : MonoBehaviour
                 }
                 else if (questNames.IndexOf(quest.Key) == questNames.Count - 1 && quest.Value)
                 {
+                    gano = true;
                     Debug.Log("ganó");
                 }
             }
         }
-        dialogText.text = $"el objetivo actual es: {actualObjetive}, Rómpele el cuello!";
+        if (!gano)
+        {
+            //dialogador[dialogIndex].IniciarDialogo();dialogText.text = $"el objetivo actual es: {actualObjetive}, Rómpele el cuello!";
+            StartCoroutine(ShowMessage($"el objetivo actual es: {actualObjetive}, Rómpele el cuello!", 5f));
+        }
+        else
+            StartCoroutine(ShowMessage("ritual completado"));
+    }
+
+    private IEnumerator ShowMessage(string message, float seconds = 2)
+    {
+        dialogPanel.SetActive(true);
+        dialogText.text = message;
+        yield return new WaitForSeconds(seconds);
+        dialogPanel.SetActive(false);
     }
 }

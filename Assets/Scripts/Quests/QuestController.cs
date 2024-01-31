@@ -30,9 +30,9 @@ public class QuestController : MonoBehaviour
     {
         if (quests.ContainsKey(questName) && FinishQuests.actualObjetive == questName)
         {
+            FinishQuests.ObjetivoCasa();
             Olfateo.singleton.objetivoActual = 0;
             quests[questName] = true;
-            Debug.Log($"item completado: {questName}");
         }
     }
 }

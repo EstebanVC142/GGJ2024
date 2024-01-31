@@ -17,6 +17,5 @@ public class CameraFollow : MonoBehaviour
     void Update()
     {
         transform.position = Vector3.Lerp(transform.position, cameraPosition.position + cameraOffset, followTime * Time.deltaTime);
-        //transform.rotation = Quaternion.Lerp(transform.rotation, cameraPosition.rotation, followTime * Time.deltaTime);
     }
 }
