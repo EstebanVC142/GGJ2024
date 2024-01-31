@@ -18,7 +18,6 @@ public class FinishQuests : MonoBehaviour
     public string actualObjetive;
     private bool playerInside = false;
     public bool gano = false;
-    public int dialogIndex;
 
     private void Awake()
     {

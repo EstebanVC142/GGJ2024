@@ -480,6 +480,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidaInicial: 5
   vidaActual: 0
+  sliderVida: {fileID: 0}
   anim: {fileID: 9065687329331291457}
   eventoMorir:
     m_PersistentCalls:
@@ -572,9 +573,8 @@ MonoBehaviour:
   - nombre: casa
     posibles:
     - {fileID: 0}
-  - nombre: toro
+  - nombre: gallina
     posibles:
-    - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
@@ -587,7 +587,8 @@ MonoBehaviour:
     posibles:
     - {fileID: 0}
     - {fileID: 0}
-  - nombre: gallina
+    - {fileID: 0}
+  - nombre: toro
     posibles:
     - {fileID: 0}
     - {fileID: 0}
