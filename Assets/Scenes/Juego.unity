@@ -166,6 +166,7 @@ MonoBehaviour:
   imagenEscena: {fileID: 915612986}
   imagenTexto: {fileID: 1244880511}
   input: {fileID: 186025652}
+  escena: Morion3
 --- !u!4 &186025651
 Transform:
   m_ObjectHideFlags: 0
