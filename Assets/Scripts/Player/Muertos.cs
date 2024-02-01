@@ -21,6 +21,7 @@ public class Muertos : MonoBehaviour
 
 	public void Desactivar()
 	{
+		Movement.singleton.blockMovement = false;
 		for (int i = 0; i < objetos.Length; i++)
 		{
 			objetos[i].SetActive(false);

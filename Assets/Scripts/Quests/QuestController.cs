@@ -32,8 +32,18 @@ public class QuestController : MonoBehaviour
         {
             FinishQuests.ObjetivoCasa();
             Olfateo.singleton.objetivoActual = 0;
-            Muertos.singleton.Activar(indexToActivate);
+            Movement.singleton.blockMovement = true;
+            Movement.singleton.anim.SetTrigger("entregar");
+            AttackBehaviour.singleton.blockAttack = true;
+            StartCoroutine(ActivarItem(indexToActivate));
             quests[questName] = true;
         }
+    }
+
+    private IEnumerator ActivarItem(int indexToActivate)
+    {
+        yield return new WaitForSeconds(1);
+        Muertos.singleton.Activar(indexToActivate);
+        Movement.singleton.blockMovement = false;
     }
 }

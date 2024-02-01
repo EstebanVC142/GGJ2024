@@ -401,10 +401,10 @@ RectTransform:
   m_Father: {fileID: 1386049218}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -51.5865, y: 214.0963}
-  m_SizeDelta: {x: 275.8269, y: 26.1999}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -89.4}
+  m_SizeDelta: {x: 275.8269, y: 26.19989}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &165745818
 MonoBehaviour:
@@ -721,6 +721,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8410624165025994403, guid: a414caa01de11ce41ac2a1a5caae1429,
         type: 3}
+      propertyPath: vidaInicial
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8410624165025994403, guid: a414caa01de11ce41ac2a1a5caae1429,
+        type: 3}
       propertyPath: eventoMorir.m_PersistentCalls.m_Calls.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -818,6 +823,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Toro (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8410624165025994407, guid: a414caa01de11ce41ac2a1a5caae1429,
+        type: 3}
+      propertyPath: rangoAtaque.y
+      value: 3.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a414caa01de11ce41ac2a1a5caae1429, type: 3}
@@ -2878,10 +2888,10 @@ RectTransform:
   m_Father: {fileID: 4214269870411724094}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0011597, y: -0.000022888}
-  m_SizeDelta: {x: 543.67, y: 117.8}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1011467394
 CanvasRenderer:
@@ -2938,15 +2948,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 72
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -3514,6 +3524,251 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -3.8443296
       objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[0].ProceduralPosition.x
+      value: -0.3923172
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[0].ProceduralPosition.y
+      value: 1.4015343
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[0].ProceduralPosition.z
+      value: -0.49965835
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[0].ProceduralRotation.w
+      value: -0.21990784
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[0].ProceduralRotation.x
+      value: 0.015210705
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[0].ProceduralRotation.y
+      value: 0.9730771
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[0].ProceduralRotation.z
+      value: 0.067306325
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[1].ProceduralPosition.x
+      value: -0.33857635
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[1].ProceduralPosition.y
+      value: 1.3841629
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[1].ProceduralPosition.z
+      value: -0.38683105
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[1].ProceduralRotation.w
+      value: -0.21986936
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[1].ProceduralRotation.x
+      value: 0.01575601
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[1].ProceduralRotation.y
+      value: 0.97290725
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[1].ProceduralRotation.z
+      value: 0.0697193
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[2].ProceduralPosition.x
+      value: -0.20716901
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[2].ProceduralPosition.y
+      value: 1.3401402
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[2].ProceduralPosition.z
+      value: -0.110945195
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[2].ProceduralRotation.w
+      value: -0.22040439
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[2].ProceduralRotation.x
+      value: 0.0035631813
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[2].ProceduralRotation.y
+      value: 0.9752747
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[2].ProceduralRotation.z
+      value: 0.015766839
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[3].ProceduralPosition.x
+      value: -0.113672405
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[3].ProceduralPosition.y
+      value: 1.3331084
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[3].ProceduralPosition.z
+      value: 0.08534816
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[3].ProceduralRotation.w
+      value: -0.2204044
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[3].ProceduralRotation.x
+      value: 0.0035633647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[3].ProceduralRotation.y
+      value: 0.9752746
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[3].ProceduralRotation.z
+      value: 0.015767649
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[4].ProceduralPosition.x
+      value: -0.020175852
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[4].ProceduralPosition.y
+      value: 1.3260763
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[4].ProceduralPosition.z
+      value: 0.2816414
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[4].ProceduralRotation.w
+      value: -0.21969901
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[4].ProceduralRotation.x
+      value: -0.017975857
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[4].ProceduralRotation.y
+      value: 0.9721534
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[4].ProceduralRotation.z
+      value: -0.07954197
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[5].ProceduralPosition.x
+      value: 0.061982848
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[5].ProceduralPosition.y
+      value: 1.3575517
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[5].ProceduralPosition.z
+      value: 0.45413116
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[5].ProceduralRotation.w
+      value: -0.21971415
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[5].ProceduralRotation.x
+      value: -0.017789584
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[5].ProceduralRotation.y
+      value: 0.97222054
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[5].ProceduralRotation.z
+      value: -0.07871772
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[6].ProceduralPosition.x
+      value: 0.1454066
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[6].ProceduralPosition.y
+      value: 1.389174
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[6].ProceduralPosition.z
+      value: 0.6292769
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[6].ProceduralRotation.w
+      value: -0.21971415
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[6].ProceduralRotation.x
+      value: -0.017789584
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[6].ProceduralRotation.y
+      value: 0.97222054
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112738341730105581, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+        type: 3}
+      propertyPath: SpineBones.Array.data[6].ProceduralRotation.z
+      value: -0.07871772
+      objectReference: {fileID: 0}
     - target: {fileID: 4112738341823212178, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
         type: 3}
       propertyPath: FinishQuests
@@ -3907,7 +4162,7 @@ PrefabInstance:
     - target: {fileID: 9041898455776794941, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
         type: 3}
       propertyPath: distanciaOlfateo
-      value: 100.3
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 9041898455776794941, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
         type: 3}
@@ -5752,6 +6007,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8410624165025994403, guid: a414caa01de11ce41ac2a1a5caae1429,
         type: 3}
+      propertyPath: vidaInicial
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8410624165025994403, guid: a414caa01de11ce41ac2a1a5caae1429,
+        type: 3}
       propertyPath: eventoMorir.m_PersistentCalls.m_Calls.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -5849,6 +6109,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Toro
+      objectReference: {fileID: 0}
+    - target: {fileID: 8410624165025994407, guid: a414caa01de11ce41ac2a1a5caae1429,
+        type: 3}
+      propertyPath: rangoAtaque.y
+      value: 3.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a414caa01de11ce41ac2a1a5caae1429, type: 3}
@@ -6027,10 +6292,10 @@ RectTransform:
   m_Father: {fileID: 1386049218}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -51.5865, y: 245.9}
-  m_SizeDelta: {x: 275.8269, y: 26.1999}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -57.596344}
+  m_SizeDelta: {x: 275.8269, y: 26.19989}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1611207709
 MonoBehaviour:
@@ -6205,7 +6470,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -2.7704, y: -0.5635}
+  m_AnchoredPosition: {x: -2.770401, y: -0.5635071}
   m_SizeDelta: {x: -17.0074, y: -10.7723}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1709693911
@@ -7083,7 +7348,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.23370361, y: 0.8817}
+  m_AnchoredPosition: {x: 0.23370361, y: 0.8816986}
   m_SizeDelta: {x: -17.1852, y: -11.2055}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2073529383
@@ -7274,6 +7539,11 @@ PrefabInstance:
     - target: {fileID: 258067536070238821, guid: 669bf57e375281e43a68cbc2fbdea84a,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3775116034664258172, guid: 669bf57e375281e43a68cbc2fbdea84a,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4237745987864906329, guid: 669bf57e375281e43a68cbc2fbdea84a,
@@ -7491,10 +7761,10 @@ RectTransform:
   m_Father: {fileID: 4214269869930363340}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.21038625, y: 0.103754915}
+  m_AnchorMin: {x: 0.133, y: 0.10886323}
   m_AnchorMax: {x: 0.9825345, y: 0.91073525}
-  m_AnchoredPosition: {x: -1.2034912, y: -22.019997}
-  m_SizeDelta: {x: 3.0243, y: -40.174}
+  m_AnchoredPosition: {x: -3.749817, y: -22.519997}
+  m_SizeDelta: {x: 8.116898, y: -39.174}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4214269870411724095
 GameObject:

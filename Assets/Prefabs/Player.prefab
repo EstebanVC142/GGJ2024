@@ -406,6 +406,7 @@ MonoBehaviour:
   sniffEnergy: 1
   sniffRecuperation: 0.2
   vivo: 1
+  blockMovement: 0
 --- !u!114 &4112738341823212176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -421,7 +422,7 @@ MonoBehaviour:
   attacker: {fileID: 8146628313069903594}
   waitTime: 0.5
   maxDetectionDistance: 3
-  attackRadious: 2
+  attackRadious: 1.5
   damage: 1
   curve:
     serializedVersion: 2
@@ -463,6 +464,7 @@ MonoBehaviour:
     m_Bits: 128
   anim: {fileID: 9065687329331291457}
   vivo: 1
+  blockAttack: 0
   spineAnimator: {fileID: 4112738341730105581}
   isAttacking: 0
   initialPosition: {x: 0, y: 0, z: 0}

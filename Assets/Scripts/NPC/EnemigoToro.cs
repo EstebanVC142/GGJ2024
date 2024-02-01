@@ -29,6 +29,7 @@ public class EnemigoToro : EstadosAnimal
         {
             if (dir > 0.7f)
             {
+                colDaños[0].enabled = true;
                 anim.SetFloat("Direccion", 0);
                 anim.SetTrigger("Atacar");
                 colDaños[0].enabled = true;
@@ -55,6 +56,7 @@ public class EnemigoToro : EstadosAnimal
     {
         if (other.CompareTag("Player"))
         {
+            colDaños[0].enabled = false;
             Perro.singleton.vida.CausarDaño(daño);
         }
     }

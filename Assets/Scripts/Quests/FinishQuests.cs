@@ -51,13 +51,16 @@ public class FinishQuests : MonoBehaviour
             QuestController.singleton.gameObject.GetComponent<Perro>().animator.SetTrigger("entregar");
             quests = QuestController.singleton.quests;
             Muertos.singleton.DesactivarConDelay(0.5f);
+            AttackBehaviour.singleton.blockAttack = false;
+            Movement.singleton.blockMovement = true;
+            Movement.singleton.GetComponent<Vida>().Curar(2);
             UpdateQuestList();
         }
     }
 
     public void ObjetivoCasa()
     {
-        StartCoroutine(ShowMessage("vuelve con tu presa a la casa"));
+        StartCoroutine(ShowMessage("Vuelve a casa y deja tu presa."));
     }
 
     private void UpdateQuestList()
@@ -82,13 +85,30 @@ public class FinishQuests : MonoBehaviour
         if (!gano)
         {
             //dialogador[dialogIndex].IniciarDialogo();dialogText.text = $"el objetivo actual es: {actualObjetive}, Rómpele el cuello!";
-            StartCoroutine(ShowMessage($"el objetivo actual es: {actualObjetive}, Rómpele el cuello!", 5f));
+            switch (actualObjetive)
+            {
+                case "gallina":
+                    StartCoroutine(ShowMessage("kikiriki hace cada mañana. Tráeme su cuerpo, pero sin su cabeza. Es el primer ingrediente. Tu objetivo actual es la gallina.", 10f));
+                    break;
+                case "conejo":
+                    StartCoroutine(ShowMessage("Saltan y son escurridizos. Tráeme su cabeza. Es el segundo ingrediente. Tu objetivo actual es el conejo.", 10f));
+                    break;
+                case "gato":
+                    StartCoroutine(ShowMessage("Ronronea y ronronea. Tráeme su cola. Es el tercer ingrediente. Tu objetivo actual es el gato.", 10f));
+                    break;
+                case "toro":
+                    StartCoroutine(ShowMessage("Embiste con fuerza, levantando polvo con cada paso. Tráeme alguna de sus patas. Es el último ingrediente. Tu objetivo actual es el toro.", 10f));
+                    break;
+                default:
+                    StartCoroutine(ShowMessage($"el objetivo actual es: {actualObjetive}, Rómpele el cuello!", 10f));
+                    break;
+            }
         }
         else
-            StartCoroutine(ShowMessage("ritual completado"));
+            StartCoroutine(ShowMessage("Ritual completado."));
     }
 
-    private IEnumerator ShowMessage(string message, float seconds = 2)
+    private IEnumerator ShowMessage(string message, float seconds = 3)
     {
         dialogPanel.SetActive(true);
         dialogText.text = message;

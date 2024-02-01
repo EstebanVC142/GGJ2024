@@ -17,7 +17,10 @@ public class Vida : MonoBehaviour, ITakeDamage
     {
         vidaActual = vidaInicial;
         if (sliderVida != null)
-        sliderVida.maxValue = vidaInicial;
+        {
+            sliderVida.maxValue = vidaInicial;
+            sliderVida.value = sliderVida.maxValue;
+        }
     }
 
     public void CausarDaño(float cuanto)
@@ -36,6 +39,15 @@ public class Vida : MonoBehaviour, ITakeDamage
         {
             sliderVida.value = vidaActual;
         }
+    }
+
+    public void Curar(float cuanto)
+    {
+        vidaActual += cuanto;
+        if (vidaActual > vidaInicial)
+        vidaActual = vidaInicial;
+
+        sliderVida.value = vidaActual;
     }
 
 }
