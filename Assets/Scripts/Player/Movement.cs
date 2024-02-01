@@ -8,6 +8,8 @@ using UnityEngine.UI;
 
 public class Movement : MonoBehaviour
 {
+    public static Movement singleton;
+
     [SerializeField]
     private PlayerInput input;
     [SerializeField]
@@ -24,8 +26,7 @@ public class Movement : MonoBehaviour
     private Rigidbody rb;
     [SerializeField]
     private AttackBehaviour attackBehaviour;
-    [SerializeField]
-    private Animator anim;
+    public Animator anim;
     [SerializeField]
     private Slider slider;
     [SerializeField]
@@ -37,14 +38,23 @@ public class Movement : MonoBehaviour
     [SerializeField]
     private float sniffRecuperation = 0.2f;
     public bool vivo = true;
+    public bool blockMovement = false;
 
     private bool blockSniff = false;
 
     private FMOD.Studio.EventInstance instance;
 
+    private void Awake()
+    {
+        if (singleton == null)
+            singleton = this;
+        else
+            DestroyImmediate(gameObject);
+    }
+
     private void Update()
     {
-        if (!attackBehaviour.isAttacking && vivo)
+        if (!attackBehaviour.isAttacking && vivo && !blockMovement)
         Move();
     }
 
@@ -74,7 +84,6 @@ public class Movement : MonoBehaviour
             if (sniffEnergy <= 0.3f)
             {
                 blockSniff = true;
-                
             }
             if (sniffProgression >= sniffRate)
             {

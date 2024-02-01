@@ -26,13 +26,24 @@ public class QuestController : MonoBehaviour
         }
     }
 
-    public void CompleteQuest(string questName)
+    public void CompleteQuest(string questName, int indexToActivate)
     {
         if (quests.ContainsKey(questName) && FinishQuests.actualObjetive == questName)
         {
             FinishQuests.ObjetivoCasa();
             Olfateo.singleton.objetivoActual = 0;
+            Movement.singleton.blockMovement = true;
+            Movement.singleton.anim.SetTrigger("entregar");
+            AttackBehaviour.singleton.blockAttack = true;
+            StartCoroutine(ActivarItem(indexToActivate));
             quests[questName] = true;
         }
+    }
+
+    private IEnumerator ActivarItem(int indexToActivate)
+    {
+        yield return new WaitForSeconds(1);
+        Muertos.singleton.Activar(indexToActivate);
+        Movement.singleton.blockMovement = false;
     }
 }

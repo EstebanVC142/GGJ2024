@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class Vida : MonoBehaviour, ITakeDamage
 {
     public float vidaInicial;
     public float vidaActual;
+    public Slider sliderVida;
     public Animator anim;
     public UnityEvent eventoMorir;
 
@@ -14,6 +16,11 @@ public class Vida : MonoBehaviour, ITakeDamage
     public void Start()
     {
         vidaActual = vidaInicial;
+        if (sliderVida != null)
+        {
+            sliderVida.maxValue = vidaInicial;
+            sliderVida.value = sliderVida.maxValue;
+        }
     }
 
     public void CausarDaño(float cuanto)
@@ -28,6 +35,19 @@ public class Vida : MonoBehaviour, ITakeDamage
         {
             anim.SetTrigger("daño");
         }
+        if (sliderVida != null)
+        {
+            sliderVida.value = vidaActual;
+        }
+    }
+
+    public void Curar(float cuanto)
+    {
+        vidaActual += cuanto;
+        if (vidaActual > vidaInicial)
+        vidaActual = vidaInicial;
+
+        sliderVida.value = vidaActual;
     }
 
 }

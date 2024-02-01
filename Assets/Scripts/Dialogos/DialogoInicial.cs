@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class DialogoInicial : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class DialogoInicial : MonoBehaviour
     private int indice = 0;
     public Image imagenEscena;
     public Image imagenTexto;
+    public PlayerInput input;
 
     private void Start()
     {
@@ -21,7 +23,7 @@ public class DialogoInicial : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (input.actions["action"].WasPressedThisFrame())
         {
             indice++;
             if (indice >= imagenesEscena.Length)

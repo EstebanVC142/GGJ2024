@@ -294,6 +294,28 @@
                 },
                 {
                     "name": "",
+                    "id": "49e4ae96-6554-4f64-af62-c1fa3329df84",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b30a0f31-6083-4a57-8afe-dba794b17e9a",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "c1f1b894-2a7b-4845-8b07-96b9b8181450",
                     "path": "<Gamepad>/leftTrigger",
                     "interactions": "",

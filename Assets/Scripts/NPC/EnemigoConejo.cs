@@ -51,5 +51,11 @@ public class EnemigoConejo : EstadosAnimal
     public void Matar()
     {
         CambiarEstado(Estados.muerto);
+        Invoke("desactivarse", 1);
+    }
+
+    private void desactivarse()
+    {
+        gameObject.SetActive(false);
     }
 }

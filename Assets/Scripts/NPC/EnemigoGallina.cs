@@ -18,6 +18,7 @@ public class EnemigoGallina : EstadosAnimal
     {
         base.EstadoIdle();
         if (animaciones != null) animaciones.SetFloat("Velocidad", 0);
+        if (!vivo) return;
         agente.SetDestination(transform.position);
     }
 
@@ -25,6 +26,7 @@ public class EnemigoGallina : EstadosAnimal
     {
         base.EstadoSeguir();
         if (animaciones != null) animaciones.SetFloat("Velocidad", 1);
+        if (!vivo) return;
         agente.SetDestination(transform.position + (transform.position - target.position) * 3);
     }
 
@@ -32,19 +34,29 @@ public class EnemigoGallina : EstadosAnimal
     {
         base.EstadoAtacar();
         if (animaciones != null) animaciones.SetFloat("Velocidad", 1);
+        if (!vivo) return;
         agente.SetDestination(transform.position + (transform.position - target.position) * 3);
     }
 
     public override void EstadoMuerto()
     {
-        base.EstadoMuerto();
-        if (animaciones != null) animaciones.SetBool("Vivo", false);
-        agente.enabled = false;
+        if (gameObject.activeSelf)
+        {
+            base.EstadoMuerto();
+            if (animaciones != null) animaciones.SetBool("Vivo", false);
+            agente.enabled = false;
+        }
     }
 
     [ContextMenu("Matar")]
     public void Matar()
     {
         CambiarEstado(Estados.muerto);
+        Invoke("desactivarse", 1);
+    }
+
+    private void desactivarse()
+    {
+        gameObject.SetActive(false);
     }
 }

@@ -8,6 +8,8 @@ using UnityEngine.InputSystem;
 
 public class AttackBehaviour : MonoBehaviour
 {
+    public static AttackBehaviour singleton;
+
     [SerializeField]
     private GameObject attacker;
     [SerializeField]
@@ -26,23 +28,24 @@ public class AttackBehaviour : MonoBehaviour
     [SerializeField]
     private Animator anim;
     public bool vivo = true;
+    public bool blockAttack = false;
 
     public FSpineAnimator spineAnimator;
 
     public bool isAttacking = false;
     public Vector3 initialPosition;
     private Vector3 attackHitBoxPos;
-    private bool isStarted;
     bool damageDealed = false;
 
     private void Awake()
     {
-        initialPosition = attacker.transform.localPosition;
-    }
+        if (singleton == null)
+            singleton = this;
+        else
+            DestroyImmediate(gameObject);
 
-    private void Start()
-    {
-        isStarted = true;
+
+        initialPosition = attacker.transform.localPosition;
     }
 
     private IEnumerator Atacando()
@@ -79,7 +82,7 @@ public class AttackBehaviour : MonoBehaviour
 
         while (t < waitTime)
         {
-            attacker.transform.localPosition = Vector3.forward * curve.Evaluate(t / waitTime);
+            //attacker.transform.localPosition = Vector3.forward * curve.Evaluate(t / waitTime);
             if (closestEnemy != null)
             attacker.transform.forward = Vector3.Lerp(ffg, lookDirection, curve.Evaluate(t / waitTime));
 
@@ -100,7 +103,7 @@ public class AttackBehaviour : MonoBehaviour
 
     private void DealDamage()
     {
-        attackHitBoxPos = (attacker.transform.forward * 1f) + new Vector3(attacker.transform.position.x, attacker.transform.position.y, attacker.transform.position.z);
+        attackHitBoxPos = (attacker.transform.forward * 1f) + new Vector3(attacker.transform.position.x, attacker.transform.position.y + 1, attacker.transform.position.z);
         Collider[] colliders = Physics.OverlapSphere(attackHitBoxPos, attackRadious, layer);
 
         if (colliders.Length > 0)
@@ -118,7 +121,7 @@ public class AttackBehaviour : MonoBehaviour
 
     private void Update()
     {
-        if (input.actions["Attack"].WasPressedThisFrame() && !isAttacking && vivo)
+        if (input.actions["Attack"].WasPressedThisFrame() && !isAttacking && vivo && !blockAttack)
         {
             StartCoroutine(Atacando());
         }
