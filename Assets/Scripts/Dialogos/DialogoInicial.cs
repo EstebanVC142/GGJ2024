@@ -14,6 +14,7 @@ public class DialogoInicial : MonoBehaviour
     public Image imagenEscena;
     public Image imagenTexto;
     public PlayerInput input;
+    public string escena;
 
     private void Start()
     {
@@ -42,6 +43,6 @@ public class DialogoInicial : MonoBehaviour
 
     public void Jugar()
     {
-        SceneManager.LoadScene("Morion3");
+        SceneManager.LoadScene(escena);
     }
 }

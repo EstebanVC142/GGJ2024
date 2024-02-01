@@ -10,6 +10,11 @@ public class Escenas : MonoBehaviour
         SceneManager.LoadScene("Juego");
     }
 
+    public void AcercaDe()
+    {
+        SceneManager.LoadScene("AcercaDe");
+    }
+
     public void Salir()
     {
         Debug.Log("Salir...");

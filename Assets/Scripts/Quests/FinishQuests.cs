@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 using UnityEngine.SearchService;
 
@@ -60,7 +61,7 @@ public class FinishQuests : MonoBehaviour
 
     public void ObjetivoCasa()
     {
-        StartCoroutine(ShowMessage("Vuelve a casa y deja tu presa."));
+        StartCoroutine(ShowMessage("Vuelve a casa y deja tu presa.", 5f));
     }
 
     private void UpdateQuestList()
@@ -105,7 +106,9 @@ public class FinishQuests : MonoBehaviour
             }
         }
         else
-            StartCoroutine(ShowMessage("Ritual completado."));
+        {
+            SceneManager.LoadScene("Final");
+        }
     }
 
     private IEnumerator ShowMessage(string message, float seconds = 3)
