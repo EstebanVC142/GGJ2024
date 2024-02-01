@@ -50,6 +50,7 @@ public class FinishQuests : MonoBehaviour
         {
             QuestController.singleton.gameObject.GetComponent<Perro>().animator.SetTrigger("entregar");
             quests = QuestController.singleton.quests;
+            Muertos.singleton.DesactivarConDelay(0.5f);
             UpdateQuestList();
         }
     }

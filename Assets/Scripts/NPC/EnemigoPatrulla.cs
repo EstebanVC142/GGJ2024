@@ -90,10 +90,16 @@ public class EnemigoPatrulla : EstadosAnimal
     public void Matar()
     {
         CambiarEstado(Estados.muerto);
+        Invoke("desactivarse", 1);
     }
 
     public void Atacar()
     {
         Perro.singleton.vida.CausarDaño(daño);
+    }
+
+    private void desactivarse()
+    {
+        gameObject.SetActive(false);
     }
 }

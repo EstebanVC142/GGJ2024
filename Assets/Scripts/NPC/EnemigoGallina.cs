@@ -40,14 +40,23 @@ public class EnemigoGallina : EstadosAnimal
 
     public override void EstadoMuerto()
     {
-        base.EstadoMuerto();
-        if (animaciones != null) animaciones.SetBool("Vivo", false);
-        agente.enabled = false;
+        if (gameObject.activeSelf)
+        {
+            base.EstadoMuerto();
+            if (animaciones != null) animaciones.SetBool("Vivo", false);
+            agente.enabled = false;
+        }
     }
 
     [ContextMenu("Matar")]
     public void Matar()
     {
         CambiarEstado(Estados.muerto);
+        Invoke("desactivarse", 1);
+    }
+
+    private void desactivarse()
+    {
+        gameObject.SetActive(false);
     }
 }

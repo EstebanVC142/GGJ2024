@@ -151,6 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemToDrop: conejo
+  indexToActivate: 1
 --- !u!114 &2819558603730674818
 MonoBehaviour:
   m_ObjectHideFlags: 0

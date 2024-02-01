@@ -164,6 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemToDrop: toro
+  indexToActivate: 3
 --- !u!114 &8410624165025994428
 MonoBehaviour:
   m_ObjectHideFlags: 0

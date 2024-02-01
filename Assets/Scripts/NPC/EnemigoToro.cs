@@ -64,6 +64,7 @@ public class EnemigoToro : EstadosAnimal
         vivo = false;
         anim.SetBool("Vivo", vivo);
         CambiarEstado(Estados.muerto);
+        Invoke("desactivarse", 1);
     }
 
     public override void CambiarEstado(Estados e)
@@ -132,5 +133,10 @@ public class EnemigoToro : EstadosAnimal
     {
         colDaños[0].enabled = false;
         colDaños[1].enabled = false;
+    }
+
+    private void desactivarse()
+    {
+        gameObject.SetActive(false);
     }
 }

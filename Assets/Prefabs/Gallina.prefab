@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemToDrop: gallina
+  indexToActivate: 0
 --- !u!114 &2069644503688089636
 MonoBehaviour:
   m_ObjectHideFlags: 0

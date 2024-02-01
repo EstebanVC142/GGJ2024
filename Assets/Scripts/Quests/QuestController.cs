@@ -26,12 +26,13 @@ public class QuestController : MonoBehaviour
         }
     }
 
-    public void CompleteQuest(string questName)
+    public void CompleteQuest(string questName, int indexToActivate)
     {
         if (quests.ContainsKey(questName) && FinishQuests.actualObjetive == questName)
         {
             FinishQuests.ObjetivoCasa();
             Olfateo.singleton.objetivoActual = 0;
+            Muertos.singleton.Activar(indexToActivate);
             quests[questName] = true;
         }
     }

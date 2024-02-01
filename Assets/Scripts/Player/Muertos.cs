@@ -26,4 +26,9 @@ public class Muertos : MonoBehaviour
 			objetos[i].SetActive(false);
 		}
 	}
+
+    public void DesactivarConDelay(float seconds = 0)
+	{
+		Invoke("Desactivar", seconds);
+	}
 }
