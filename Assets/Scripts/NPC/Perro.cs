@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.PackageManager;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class Perro : MonoBehaviour
@@ -11,6 +12,8 @@ public class Perro : MonoBehaviour
     public AttackBehaviour attack;
     private float velocidad;
     private Vector3 posicionAnterior;
+    public GameObject panelMuerte;
+    public GameObject botonReiniciar;
 
     public Vida vida;
 
@@ -28,9 +31,22 @@ public class Perro : MonoBehaviour
 
     public void Morir()
     {
+        if (!movement.vivo) return;
+        panelMuerte.SetActive(true);
+        UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(botonReiniciar);
         animator.SetBool("vivo", false);
         movement.vivo = false; 
         attack.vivo = false;
+    }
+
+    public void Reiniciar()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void Salir()
+    {
+        Application.Quit();
     }
 
     private void Awake()

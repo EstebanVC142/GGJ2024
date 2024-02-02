@@ -29,6 +29,7 @@ public class EnemigoToro : EstadosAnimal
         {
             if (dir > 0.7f)
             {
+                colDaños[0].enabled = true;
                 anim.SetFloat("Direccion", 0);
                 anim.SetTrigger("Atacar");
                 colDaños[0].enabled = true;
@@ -55,6 +56,7 @@ public class EnemigoToro : EstadosAnimal
     {
         if (other.CompareTag("Player"))
         {
+            colDaños[0].enabled = false;
             Perro.singleton.vida.CausarDaño(daño);
         }
     }
@@ -64,6 +66,7 @@ public class EnemigoToro : EstadosAnimal
         vivo = false;
         anim.SetBool("Vivo", vivo);
         CambiarEstado(Estados.muerto);
+        Invoke("desactivarse", 1);
     }
 
     public override void CambiarEstado(Estados e)
@@ -72,6 +75,7 @@ public class EnemigoToro : EstadosAnimal
         switch (e)
         {
             case Estados.idle:
+                nav.SetDestination(transform.position);
                 anim.SetFloat("Velocidad", 0);
                 break;
             case Estados.seguir:
@@ -131,5 +135,10 @@ public class EnemigoToro : EstadosAnimal
     {
         colDaños[0].enabled = false;
         colDaños[1].enabled = false;
+    }
+
+    private void desactivarse()
+    {
+        gameObject.SetActive(false);
     }
 }

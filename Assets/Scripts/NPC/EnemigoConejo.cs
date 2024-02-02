@@ -19,6 +19,7 @@ public class EnemigoConejo : EstadosAnimal
     {
         base.EstadoIdle();
         if (animaciones != null) animaciones.SetFloat("Velocidad", 0);
+        if (!vivo) return;
         agente.SetDestination(transform.position);
     }
 
@@ -26,6 +27,7 @@ public class EnemigoConejo : EstadosAnimal
     {
         base.EstadoSeguir();
         if (animaciones != null) animaciones.SetFloat("Velocidad", 1);
+        if (!vivo) return;
         agente.SetDestination(transform.position + (transform.position - target.position) * 3);
     }
 
@@ -33,6 +35,7 @@ public class EnemigoConejo : EstadosAnimal
     {
         base.EstadoAtacar();
         if (animaciones != null) animaciones.SetFloat("Velocidad", 1);
+        if (!vivo) return;
         agente.SetDestination(transform.position + (transform.position - target.position) * 3);
     }
 
@@ -40,6 +43,7 @@ public class EnemigoConejo : EstadosAnimal
     {
         base.EstadoMuerto();
         if (animaciones != null) animaciones.SetBool("Vivo", false);
+        vivo = false;
         agente.enabled = false;
     }
 
@@ -47,5 +51,11 @@ public class EnemigoConejo : EstadosAnimal
     public void Matar()
     {
         CambiarEstado(Estados.muerto);
+        Invoke("desactivarse", 1);
+    }
+
+    private void desactivarse()
+    {
+        gameObject.SetActive(false);
     }
 }

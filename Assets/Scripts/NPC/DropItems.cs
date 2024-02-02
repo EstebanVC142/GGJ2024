@@ -7,11 +7,10 @@ public class DropItems : MonoBehaviour
 {
     [SerializeField]
     private string itemToDrop;
-    [SerializeField]
-    private Vida vida;
+    public int indexToActivate;
 
     public void AddItem()
     {
-        QuestController.singleton.CompleteQuest(itemToDrop);
+        QuestController.singleton.CompleteQuest(itemToDrop, indexToActivate);
     }
 }
