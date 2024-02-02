@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -189,6 +189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemToDrop: conejo
+  indexToActivate: 0
 --- !u!114 &111322768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -359,6 +360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemToDrop: conejo
+  indexToActivate: 0
 --- !u!114 &133450885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -529,6 +531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemToDrop: toro
+  indexToActivate: 0
 --- !u!114 &407022508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -699,6 +702,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemToDrop: gato
+  indexToActivate: 0
 --- !u!114 &578618173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -882,6 +886,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemToDrop: gallina
+  indexToActivate: 0
 --- !u!114 &588150056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1117,6 +1122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemToDrop: gato
+  indexToActivate: 0
 --- !u!114 &751842113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1337,6 +1343,21 @@ PrefabInstance:
     - target: {fileID: 1818705358427507894, guid: ea7365a1fc31e714288d22398d0acc5a,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5225057014179121350, guid: ea7365a1fc31e714288d22398d0acc5a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5225057014179121350, guid: ea7365a1fc31e714288d22398d0acc5a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5225057014179121350, guid: ea7365a1fc31e714288d22398d0acc5a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1649,6 +1670,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemToDrop: conejo
+  indexToActivate: 0
 --- !u!114 &1219483638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1699,7 +1721,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 4112738341038597781}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1410661763}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
@@ -1712,6 +1734,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2818888113851784586, guid: c4ab66e0dd5005c45827ee7cc60d9d57,
+        type: 3}
+      propertyPath: Preload
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8798894210565065506, guid: c4ab66e0dd5005c45827ee7cc60d9d57,
+        type: 3}
+      propertyPath: Preload
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8856151776555739591, guid: c4ab66e0dd5005c45827ee7cc60d9d57,
+        type: 3}
+      propertyPath: Preload
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8892994506710222763, guid: c4ab66e0dd5005c45827ee7cc60d9d57,
         type: 3}
       propertyPath: m_Name
@@ -1774,6 +1811,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4ab66e0dd5005c45827ee7cc60d9d57, type: 3}
+--- !u!1 &1410661763 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4112738341823212905, guid: 296f2e0fcfbcf7a4f91c2d490f0cc169,
+    type: 3}
+  m_PrefabInstance: {fileID: 4112738341038597781}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1489965718
 GameObject:
   m_ObjectHideFlags: 0
@@ -1822,6 +1865,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemToDrop: gallina
+  indexToActivate: 0
 --- !u!114 &1489965721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2065,7 +2109,7 @@ MonoBehaviour:
   dialogText: {fileID: 0}
   dialogPanel: {fileID: 0}
   dialogador:
-  - {fileID: 1599492307}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -2091,18 +2135,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8410624163435677294}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1599492307 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8410624165025994429, guid: a414caa01de11ce41ac2a1a5caae1429,
-    type: 3}
-  m_PrefabInstance: {fileID: 8410624163435677294}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04d2c1931f4955b4b807f5791e42d48b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1600159964
 GameObject:
   m_ObjectHideFlags: 0
@@ -2138,6 +2170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemToDrop: gallina
+  indexToActivate: 0
 --- !u!114 &1600159966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2438,6 +2471,7 @@ GameObject:
   - component: {fileID: 1977771487}
   - component: {fileID: 1977771490}
   - component: {fileID: 1977771491}
+  - component: {fileID: 1977771492}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2558,6 +2592,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraPosition: {fileID: 1604690082}
   followTime: 3
+--- !u!114 &1977771492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977771486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 1410661763}
 --- !u!1 &2055750556
 GameObject:
   m_ObjectHideFlags: 0
@@ -2593,6 +2640,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemToDrop: toro
+  indexToActivate: 0
 --- !u!114 &2055750558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2763,6 +2811,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemToDrop: toro
+  indexToActivate: 0
 --- !u!114 &2145535345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3059,6 +3108,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1947407173238236581, guid: a414caa01de11ce41ac2a1a5caae1429,
+        type: 3}
+      propertyPath: Preload
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2761357867475633222, guid: a414caa01de11ce41ac2a1a5caae1429,
+        type: 3}
+      propertyPath: Preload
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2947384956604395664, guid: a414caa01de11ce41ac2a1a5caae1429,
+        type: 3}
+      propertyPath: Preload
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653578844063076836, guid: a414caa01de11ce41ac2a1a5caae1429,
+        type: 3}
+      propertyPath: Preload
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8410624165025994404, guid: a414caa01de11ce41ac2a1a5caae1429,
         type: 3}
       propertyPath: m_RootOrder
@@ -3118,6 +3187,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Toro
+      objectReference: {fileID: 0}
+    - target: {fileID: 8798950318757868877, guid: a414caa01de11ce41ac2a1a5caae1429,
+        type: 3}
+      propertyPath: Preload
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a414caa01de11ce41ac2a1a5caae1429, type: 3}
