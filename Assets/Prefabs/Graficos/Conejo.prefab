@@ -1774,6 +1774,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6494302154731402477}
   - component: {fileID: 6749449003218031364}
+  - component: {fileID: 7354866726574554804}
   m_Layer: 0
   m_Name: Conejo
   m_TagString: Untagged
@@ -1819,6 +1820,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &7354866726574554804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5866982820351700567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f4a73aeaf48c14479046cacc37440ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emitter:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &5976312348328188717
 GameObject:
   m_ObjectHideFlags: 0

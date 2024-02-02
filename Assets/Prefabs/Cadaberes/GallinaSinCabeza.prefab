@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8849110065718090625}
   - component: {fileID: 5575879844395930660}
   - component: {fileID: 7675671315841949934}
+  - component: {fileID: 5498701177622448495}
   m_Layer: 0
   m_Name: GallinaSinCabeza
   m_TagString: Untagged
@@ -84,6 +85,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5498701177622448495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8180096120043962683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1335609541
+      Data2: 1285057442
+      Data3: 270835642
+      Data4: -165103467
+    Path: event:/S
+  Event: 
+  PlayEvent: 11
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &2545749961109276841
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -176,7 +208,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6504259543960541048, guid: c54c876369ce1ab40a08206866251711, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c54c876369ce1ab40a08206866251711, type: 3}
 --- !u!4 &9026589990084581150 stripped
 Transform:

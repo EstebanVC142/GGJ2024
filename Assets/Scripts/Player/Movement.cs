@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using Unity.Mathematics;
+using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -42,7 +43,7 @@ public class Movement : MonoBehaviour
 
     private bool blockSniff = false;
 
-    private FMOD.Studio.EventInstance instance;
+    
 
     private void Awake()
     {
@@ -50,6 +51,8 @@ public class Movement : MonoBehaviour
             singleton = this;
         else
             DestroyImmediate(gameObject);
+
+       
     }
 
     private void Update()
@@ -73,6 +76,8 @@ public class Movement : MonoBehaviour
 
         if (input.actions["Run"].IsPressed())
             rb.velocity = transform.forward * movementDirection.magnitude * (velocity * 2) + Vector3.up * rb.velocity.y;
+            
+            
         else if (input.actions["Smell"].IsPressed() && !blockSniff)
         {
             rb.velocity = transform.forward * movementDirection.magnitude * (velocity / 2) + Vector3.up * rb.velocity.y;
@@ -81,15 +86,17 @@ public class Movement : MonoBehaviour
             sniffEnergy -= Time.deltaTime * sniffRecuperation;
             slider.value = sniffEnergy;
 
+           
+
             if (sniffEnergy <= 0.3f)
             {
                 blockSniff = true;
+   
             }
             if (sniffProgression >= sniffRate)
             {
                 sniffProgression = 0;
                 Olfateo.singleton.Olfatear();
-                
             }
             
         }
@@ -97,6 +104,7 @@ public class Movement : MonoBehaviour
         {
             rb.velocity = transform.forward * movementDirection.magnitude * velocity + Vector3.up * rb.velocity.y;
             anim.SetFloat("olfateo", 0);
+           
             if (sniffEnergy < 1)
             {
                 sniffEnergy += (Time.deltaTime * sniffRecuperation);
@@ -108,5 +116,7 @@ public class Movement : MonoBehaviour
         }
     }
 
-   
+    
+
+
 }

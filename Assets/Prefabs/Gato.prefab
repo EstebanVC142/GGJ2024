@@ -1,5 +1,68 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1362537800269331447
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4369064983755550542}
+  - component: {fileID: 162225178788385420}
+  m_Layer: 7
+  m_Name: Dead
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4369064983755550542
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362537800269331447}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5225057014179121350}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &162225178788385420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362537800269331447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 626600715
+      Data2: 1280047429
+      Data3: -1568094553
+      Data4: -1032852183
+    Path: event:/Effectos/Gato/Dead
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 1
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1818705358427507891
 GameObject:
   m_ObjectHideFlags: 0
@@ -37,6 +100,7 @@ Transform:
   m_Children:
   - {fileID: 1818705359333951153}
   - {fileID: 5803787190940194249}
+  - {fileID: 5225057014179121350}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -288,6 +352,294 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1909597625740680702
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4859588934235532214}
+  - component: {fileID: 7717060943762980538}
+  m_Layer: 7
+  m_Name: Ataque
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4859588934235532214
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909597625740680702}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5225057014179121350}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7717060943762980538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909597625740680702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 400219217
+      Data2: 1130925629
+      Data3: -1067658828
+      Data4: -492535172
+    Path: event:/Effectos/Gato/Ataque
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 1
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!1 &4377402260644175795
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5225057014179121350}
+  m_Layer: 7
+  m_Name: AudioEmitter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5225057014179121350
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4377402260644175795}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5585149931868129355}
+  - {fileID: 4859588934235532214}
+  - {fileID: 4076133275592177562}
+  - {fileID: 5110896153304776030}
+  - {fileID: 4369064983755550542}
+  m_Father: {fileID: 1818705358427507894}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6258736193610509518
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5110896153304776030}
+  - component: {fileID: 615061019874284030}
+  m_Layer: 7
+  m_Name: agro
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5110896153304776030
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6258736193610509518}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5225057014179121350}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &615061019874284030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6258736193610509518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1455563610
+      Data2: 1250687654
+      Data3: -1185096285
+      Data4: -730003053
+    Path: event:/Effectos/Gato/Agro
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 1
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!1 &6529175134907404153
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4076133275592177562}
+  - component: {fileID: 1452197522575784905}
+  m_Layer: 7
+  m_Name: Dano
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4076133275592177562
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6529175134907404153}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5225057014179121350}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1452197522575784905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6529175134907404153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 424612928
+      Data2: 1325961618
+      Data3: -560772986
+      Data4: -2146785000
+    Path: event:/Effectos/Gato/Dano
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 1
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!1 &9002767838965765132
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5585149931868129355}
+  - component: {fileID: 8417110972866626228}
+  m_Layer: 7
+  m_Name: Pasos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5585149931868129355
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9002767838965765132}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5225057014179121350}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8417110972866626228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9002767838965765132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -2050881469
+      Data2: 1314647150
+      Data3: -1948386138
+      Data4: 1250057955
+    Path: event:/Effectos/Gato/Pasos
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 1
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &1818705357547532816
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -553,202 +905,202 @@ PrefabInstance:
     - target: {fileID: 5637625120137752285, guid: a7a76e0420e3f1640a5b7823f16dc24c,
         type: 3}
       propertyPath: SpineBones.Array.data[0].ProceduralPosition.x
-      value: -122.076004
+      value: 13.264199
       objectReference: {fileID: 0}
     - target: {fileID: 5637625120137752285, guid: a7a76e0420e3f1640a5b7823f16dc24c,
         type: 3}
       propertyPath: SpineBones.Array.data[0].ProceduralPosition.y
-      value: 0.68626785
+      value: 1.4880936
       objectReference: {fileID: 0}
     - target: {fileID: 5637625120137752285, guid: a7a76e0420e3f1640a5b7823f16dc24c,
         type: 3}
       propertyPath: SpineBones.Array.data[0].ProceduralPosition.z
-      value: 16.244438
+      value: 6.970952
       objectReference: {fileID: 0}
     - target: {fileID: 5637625120137752285, guid: a7a76e0420e3f1640a5b7823f16dc24c,
         type: 3}
       propertyPath: SpineBones.Array.data[0].ProceduralRotation.y
-      value: 0.99820584
+      value: 0.9982055
       objectReference: {fileID: 0}
     - target: {fileID: 5637625120137752285, guid: a7a76e0420e3f1640a5b7823f16dc24c,
         type: 3}
       propertyPath: SpineBones.Array.data[0].ProceduralRotation.z
-      value: -0.0598764
+      value: -0.05988172
       objectReference: {fileID: 0}
     - target: {fileID: 5637625120137752285, guid: a7a76e0420e3f1640a5b7823f16dc24c,
         type: 3}
       propertyPath: SpineBones.Array.data[1].ProceduralPosition.x
-      value: -122.076004
+      value: 13.264199
       objectReference: {fileID: 0}
     - target: {fileID: 5637625120137752285, guid: a7a76e0420e3f1640a5b7823f16dc24c,
         type: 3}
       propertyPath: SpineBones.Array.data[1].ProceduralPosition.y
-      value: 0.69535637
+      value: 1.4971825
       objectReference: {fileID: 0}
     - target: {fileID: 5637625120137752285, guid: a7a76e0420e3f1640a5b7823f16dc24c,
         type: 3}
       propertyPath: SpineBones.Array.data[1].ProceduralPosition.z
-      value: 16.319923
+      value: 7.0464334
       objectReference: {fileID: 0}
     - target: {fileID: 5637625120137752285, guid: a7a76e0420e3f1640a5b7823f16dc24c,
         type: 3}
       propertyPath: SpineBones.Array.data[1].ProceduralRotation.y
-      value: 0.9968969
+      value: 0.9968968
       objectReference: {fileID: 0}
     - target: {fileID: 5637625120137752285, guid: a7a76e0420e3f1640a5b7823f16dc24c,
         type: 3}
       propertyPath: SpineBones.Array.data[1].ProceduralRotation.z
-      value: 0.07871822
+      value: 0.078719586
       objectReference: {fileID: 0}
     - target: {fileID: 5637625120137752285, guid: a7a76e0420e3f1640a5b7823f16dc24c,
         type: 3}
       propertyPath: SpineBones.Array.data[2].ProceduralPosition.x
-      value: -122.076004
+      value: 13.264199
       objectReference: {fileID: 0}
     - target: {fileID: 5637625120137752285, guid: a7a76e0420e3f1640a5b7823f16dc24c,
         type: 3}
       propertyPath: SpineBones.Array.data[2].ProceduralPosition.y
-      value: 0.6713791
+      value: 1.4732051
       objectReference: {fileID: 0}
     - target: {fileID: 5637625120137752285, guid: a7a76e0420e3f1640a5b7823f16dc24c,
         type: 3}
       propertyPath: SpineBones.Array.data[2].ProceduralPosition.z
-      value: 16.470802
+      value: 7.1973104
       objectReference: {fileID: 0}
     - target: {fileID: 5637625120137752285, guid: a7a76e0420e3f1640a5b7823f16dc24c,
         type: 3}
       propertyPath: SpineBones.Array.data[2].ProceduralRotation.y
-      value: 0.9999062
+      value: 0.99990624
       objectReference: {fileID: 0}
     - target: {fileID: 5637625120137752285, guid: a7a76e0420e3f1640a5b7823f16dc24c,
         type: 3}
       propertyPath: SpineBones.Array.data[2].ProceduralRotation.z
-      value: 0.013698908
+      value: 0.013695871
       objectReference: {fileID: 0}
     - target: {fileID: 5637625120137752285, guid: a7a76e0420e3f1640a5b7823f16dc24c,
         type: 3}
       propertyPath: SpineBones.Array.data[3].ProceduralPosition.x
-      value: -122.076004
+      value: 13.264199
       objectReference: {fileID: 0}
     - target: {fileID: 5637625120137752285, guid: a7a76e0420e3f1640a5b7823f16dc24c,
         type: 3}
       propertyPath: SpineBones.Array.data[3].ProceduralPosition.y
-      value: 0.6669636
+      value: 1.4687905
       objectReference: {fileID: 0}
     - target: {fileID: 5637625120137752285, guid: a7a76e0420e3f1640a5b7823f16dc24c,
         type: 3}
       propertyPath: SpineBones.Array.data[3].ProceduralPosition.z
-      value: 16.63192
+      value: 7.358429
       objectReference: {fileID: 0}
     - target: {fileID: 5637625120137752285, guid: a7a76e0420e3f1640a5b7823f16dc24c,
         type: 3}
       propertyPath: SpineBones.Array.data[3].ProceduralRotation.y
-      value: 0.9990608
+      value: 0.99906075
       objectReference: {fileID: 0}
     - target: {fileID: 5637625120137752285, guid: a7a76e0420e3f1640a5b7823f16dc24c,
         type: 3}
       propertyPath: SpineBones.Array.data[3].ProceduralRotation.z
-      value: -0.04333088
+      value: -0.04333144
       objectReference: {fileID: 0}
     - target: {fileID: 5637625120137752285, guid: a7a76e0420e3f1640a5b7823f16dc24c,
         type: 3}
       propertyPath: SpineBones.Array.data[4].ProceduralPosition.x
-      value: -122.076004
+      value: 13.264199
       objectReference: {fileID: 0}
     - target: {fileID: 5637625120137752285, guid: a7a76e0420e3f1640a5b7823f16dc24c,
         type: 3}
       propertyPath: SpineBones.Array.data[4].ProceduralPosition.y
-      value: 0.67622566
+      value: 1.4780527
       objectReference: {fileID: 0}
     - target: {fileID: 5637625120137752285, guid: a7a76e0420e3f1640a5b7823f16dc24c,
         type: 3}
       propertyPath: SpineBones.Array.data[4].ProceduralPosition.z
-      value: 16.738495
+      value: 7.465004
       objectReference: {fileID: 0}
     - target: {fileID: 5637625120137752285, guid: a7a76e0420e3f1640a5b7823f16dc24c,
         type: 3}
       propertyPath: SpineBones.Array.data[4].ProceduralRotation.y
-      value: 0.9990608
+      value: 0.99906075
       objectReference: {fileID: 0}
     - target: {fileID: 5637625120137752285, guid: a7a76e0420e3f1640a5b7823f16dc24c,
         type: 3}
       propertyPath: SpineBones.Array.data[4].ProceduralRotation.z
-      value: -0.04333088
+      value: -0.04333144
       objectReference: {fileID: 0}
     - target: {fileID: 5637625120137752285, guid: a7a76e0420e3f1640a5b7823f16dc24c,
         type: 3}
       propertyPath: SpineBones.Array.data[5].ProceduralPosition.x
-      value: -122.076004
+      value: 13.264199
       objectReference: {fileID: 0}
     - target: {fileID: 5637625120137752285, guid: a7a76e0420e3f1640a5b7823f16dc24c,
         type: 3}
       propertyPath: SpineBones.Array.data[5].ProceduralPosition.y
-      value: 0.68548775
+      value: 1.4873149
       objectReference: {fileID: 0}
     - target: {fileID: 5637625120137752285, guid: a7a76e0420e3f1640a5b7823f16dc24c,
         type: 3}
       propertyPath: SpineBones.Array.data[5].ProceduralPosition.z
-      value: 16.84507
+      value: 7.571579
       objectReference: {fileID: 0}
     - target: {fileID: 5637625120137752285, guid: a7a76e0420e3f1640a5b7823f16dc24c,
         type: 3}
       propertyPath: SpineBones.Array.data[5].ProceduralRotation.y
-      value: 0.9999199
+      value: 0.99991995
       objectReference: {fileID: 0}
     - target: {fileID: 5637625120137752285, guid: a7a76e0420e3f1640a5b7823f16dc24c,
         type: 3}
       propertyPath: SpineBones.Array.data[5].ProceduralRotation.z
-      value: -0.012656949
+      value: -0.012654653
       objectReference: {fileID: 0}
     - target: {fileID: 5637625120137752285, guid: a7a76e0420e3f1640a5b7823f16dc24c,
         type: 3}
       propertyPath: SpineBones.Array.data[6].ProceduralPosition.x
-      value: -122.076004
+      value: 13.264199
       objectReference: {fileID: 0}
     - target: {fileID: 5637625120137752285, guid: a7a76e0420e3f1640a5b7823f16dc24c,
         type: 3}
       propertyPath: SpineBones.Array.data[6].ProceduralPosition.y
-      value: 0.6912079
+      value: 1.4930341
       objectReference: {fileID: 0}
     - target: {fileID: 5637625120137752285, guid: a7a76e0420e3f1640a5b7823f16dc24c,
         type: 3}
       propertyPath: SpineBones.Array.data[6].ProceduralPosition.z
-      value: 17.070984
+      value: 7.7974963
       objectReference: {fileID: 0}
     - target: {fileID: 5637625120137752285, guid: a7a76e0420e3f1640a5b7823f16dc24c,
         type: 3}
       propertyPath: SpineBones.Array.data[6].ProceduralRotation.y
-      value: 0.9445826
+      value: 0.94458133
       objectReference: {fileID: 0}
     - target: {fileID: 5637625120137752285, guid: a7a76e0420e3f1640a5b7823f16dc24c,
         type: 3}
       propertyPath: SpineBones.Array.data[6].ProceduralRotation.z
-      value: -0.32827398
+      value: -0.3282775
       objectReference: {fileID: 0}
     - target: {fileID: 5637625120137752285, guid: a7a76e0420e3f1640a5b7823f16dc24c,
         type: 3}
       propertyPath: SpineBones.Array.data[7].ProceduralPosition.x
-      value: -122.076004
+      value: 13.264199
       objectReference: {fileID: 0}
     - target: {fileID: 5637625120137752285, guid: a7a76e0420e3f1640a5b7823f16dc24c,
         type: 3}
       propertyPath: SpineBones.Array.data[7].ProceduralPosition.y
-      value: 0.7408886
+      value: 1.5427145
       objectReference: {fileID: 0}
     - target: {fileID: 5637625120137752285, guid: a7a76e0420e3f1640a5b7823f16dc24c,
         type: 3}
       propertyPath: SpineBones.Array.data[7].ProceduralPosition.z
-      value: 17.133827
+      value: 7.860338
       objectReference: {fileID: 0}
     - target: {fileID: 5637625120137752285, guid: a7a76e0420e3f1640a5b7823f16dc24c,
         type: 3}
       propertyPath: SpineBones.Array.data[7].ProceduralRotation.y
-      value: 0.9445826
+      value: 0.94458133
       objectReference: {fileID: 0}
     - target: {fileID: 5637625120137752285, guid: a7a76e0420e3f1640a5b7823f16dc24c,
         type: 3}
       propertyPath: SpineBones.Array.data[7].ProceduralRotation.z
-      value: -0.32827398
+      value: -0.3282775
       objectReference: {fileID: 0}
     - target: {fileID: 5637625120137752286, guid: a7a76e0420e3f1640a5b7823f16dc24c,
         type: 3}
@@ -869,6 +1221,30 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 1818705357547532816}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6611531779750989683 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4827216672110411107, guid: a7a76e0420e3f1640a5b7823f16dc24c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1818705357547532816}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5751764575698930516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6611531779750989683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f4a73aeaf48c14479046cacc37440ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emitter:
+  - {fileID: 8417110972866626228}
+  - {fileID: 7717060943762980538}
+  - {fileID: 1452197522575784905}
+  - {fileID: 615061019874284030}
+  - {fileID: 162225178788385420}
 --- !u!135 &6770383601327776765 stripped
 SphereCollider:
   m_CorrespondingSourceObject: {fileID: 4956328903145542125, guid: a7a76e0420e3f1640a5b7823f16dc24c,
