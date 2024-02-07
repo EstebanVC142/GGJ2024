@@ -15,10 +15,14 @@ public class Escenas : MonoBehaviour
         SceneManager.LoadScene("AcercaDe");
     }
 
+    public void Menu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
     public void Salir()
     {
         Debug.Log("Salir...");
         Application.Quit();
-
     }
 }

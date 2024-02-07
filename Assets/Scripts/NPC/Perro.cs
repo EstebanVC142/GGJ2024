@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.PackageManager;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using Unity.VisualScripting;
 
 public class Perro : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class Perro : MonoBehaviour
     private void Start()
     {
         posicionAnterior = transform.position;
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = false;
     }
 
     private void FixedUpdate()
@@ -32,6 +35,8 @@ public class Perro : MonoBehaviour
     public void Morir()
     {
         if (!movement.vivo) return;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         panelMuerte.SetActive(true);
         UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(botonReiniciar);
         animator.SetBool("vivo", false);
